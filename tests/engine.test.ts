@@ -1,4 +1,3 @@
-import { execFileSync } from "node:child_process";
 import {
   existsSync,
   mkdtempSync,
@@ -33,6 +32,7 @@ import { buildCollectionInMemory, bundleFiles } from "@botmint/exporters";
 import { errorsOf, lintRecipe } from "@botmint/lint";
 import { assertPolishAllowed, fieldsOf, polishCollection, polishRecipe } from "@botmint/polish";
 import { describe, expect, it } from "vitest";
+import { execPnpm } from "./pnpm.ts";
 
 const root = path.resolve(import.meta.dirname, "..");
 
@@ -314,7 +314,7 @@ describe("polish guards", () => {
 
 describe("cli", () => {
   it("prints the count as json", () => {
-    const output = execFileSync("pnpm", ["exec", "botmint", "count", "--json"], {
+    const output = execPnpm(["exec", "botmint", "count", "--json"], {
       cwd: root,
       encoding: "utf8",
     });
