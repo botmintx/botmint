@@ -1,7 +1,7 @@
-import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
+import { execPnpm } from "./pnpm.ts";
 
 const root = path.resolve(import.meta.dirname, "..");
 const banner = "Dev sample — not Genesis. 25 bots from seed botmint-dev-sample-001";
@@ -10,7 +10,7 @@ const footer =
 
 describe("gallery export", () => {
   it("builds every route with the banner and footer", () => {
-    execFileSync("pnpm", ["--filter", "@botmint/gallery", "build"], {
+    execPnpm(["--filter", "@botmint/gallery", "build"], {
       cwd: root,
       stdio: "inherit",
     });
