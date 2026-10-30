@@ -1,0 +1,12 @@
+id: notion-sync
+layer: skill
+label: Notion notes
+weight: 5
+description: When the owner wants notes, decisions or tasks written into Notion.
+skillDescription: When the owner wants notes, decisions or tasks written into Notion.
+partials:
+  body: Write the {{domain.label}} notes, decisions and tasks for {{name}} into the workspace they
+    use. Show the wording first when it records a decision.
+needs:
+  connectors:
+    - notion

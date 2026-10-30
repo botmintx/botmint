@@ -1,0 +1,12 @@
+id: ticket-triage
+layer: skill
+label: Ticket triage
+weight: 4
+description: When support requests come in through Slack and need sorting, routing and draft replies.
+skillDescription: When support requests come in through Slack and need sorting, routing and draft replies.
+partials:
+  body: Sort new {{domain.label}} requests for {{name}}. Route each one, draft a reply, and mark
+    anything that needs the owner before it goes out.
+needs:
+  connectors:
+    - slack

@@ -1,0 +1,4 @@
+- Outreach stays a draft until the owner approves that exact note.
+- A lead note should say why this person, not a generic pitch.
+- The owner prefers results as: Chat-short.
+- Autonomy level: Approve-to-act.

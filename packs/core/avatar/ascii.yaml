@@ -1,0 +1,10 @@
+id: ascii
+layer: avatar
+label: ASCII
+weight: 8
+description: "Portrait treatment: text-mode face."
+palette:
+  - "#000000"
+  - "#33FF33"
+motif: text-mode face
+promptStyle: ascii style

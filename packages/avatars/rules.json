@@ -1,0 +1,94 @@
+{
+  "version": "6.2",
+  "status": "final art (v6.2). Mint weights are planned, not set.",
+  "canvas": 512,
+  "categories": {
+    "Background": ["Mint Wash", "Carbon", "Paper", "Lilac", "Sky", "Butter", "Coral", "Sage"],
+    "Body": [
+      "Mint",
+      "Spearmint",
+      "Deep Mint",
+      "Fog",
+      "Graphite",
+      "Lilac",
+      "Cobalt",
+      "Sky",
+      "Gold",
+      "Obsidian",
+      "Glitch"
+    ],
+    "Eyes": ["Idle", "Joy", "Wink", "Wide", "Sleepy", "Glance", "Focus"],
+    "Headwear": ["None", "Cap", "Beanie", "Bucket Hat", "Crown", "Headphones", "Headband"],
+    "Eyewear": ["None", "Specs", "Shades", "Visor", "VR Goggles", "Monocle"],
+    "Clothing": ["Bare", "Tee", "Hoodie", "Bomber", "Turtleneck", "Puffer", "Blazer"],
+    "Accessory": ["None", "Chain", "Seed Pendant", "Scarf", "Lanyard"]
+  },
+  "draw_order": [
+    "Background (+ Legendary backdrop for Gold/Obsidian/Glitch)",
+    "body group, translate(0 -50): Clothing, Accessory, head's soft cast shadow on the torso",
+    "head group, translate(256 60) scale(0.84) translate(-256 -60): head skin + cut-out eyes",
+    "headwear.back",
+    "headwear.ao (soft shadows on the head)",
+    "eyewear.shadow",
+    "eyewear.items",
+    "sprout here if headwear.sprout == 'between'",
+    "headwear.front",
+    "sprout here if headwear.sprout == 'after' (lifted by headwear.lift, stem clipped at headwear.clip)",
+    "headwear.top"
+  ],
+  "invalid": [
+    {
+      "Clothing": "Turtleneck",
+      "Accessory": "Scarf"
+    }
+  ],
+  "dedupe": [
+    "Eyewear = VR Goggles hides the eyes, so Eyes collapses to a single value (Idle) under VR Goggles"
+  ],
+  "tiers": {
+    "order": ["1/1", "LEGENDARY", "RARE", "UNCOMMON", "COMMON"],
+    "1/1": {
+      "rule": "hand-made one-of-ones, not rolled",
+      "members": ["Full Bloom", "Spacewalk", "Blueprint"]
+    },
+    "LEGENDARY": {
+      "rule": "Body is any of",
+      "values": ["Glitch", "Gold", "Obsidian"]
+    },
+    "RARE": {
+      "rule": "any trait is one of",
+      "values": ["Crown", "Monocle", "VR Goggles"]
+    },
+    "UNCOMMON": {
+      "rule": "at least 2 traits from",
+      "values": [
+        "Blazer",
+        "Bomber",
+        "Bucket Hat",
+        "Chain",
+        "Headphones",
+        "Puffer",
+        "Seed Pendant",
+        "Shades",
+        "Visor"
+      ]
+    },
+    "COMMON": {
+      "rule": "everything else"
+    }
+  },
+  "counts": {
+    "distinct_valid_combinations": 753984,
+    "by_tier": {
+      "COMMON": 159488,
+      "UNCOMMON": 206080,
+      "RARE": 182784,
+      "LEGENDARY": 205632
+    },
+    "one_of_ones": 3
+  },
+  "genesis": {
+    "supply": 10000,
+    "selection": "planned: seeded weighted picks from the space above; weights not final"
+  }
+}

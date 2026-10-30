@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a short bullet brief in this chat.",
+    "name": "premarket-weekday-ops-coordinator",
+    "prompt": "Collect the Crypto status since the last run. Name blockers, owners and what slipped, and draft the update for the owner to share.\n\nBring in Daily digest, Pull request review and Sprint report where they fit.",
+    "schedule": "47 7 * * 1-5",
+    "trigger": null
+  }
+]

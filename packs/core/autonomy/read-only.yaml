@@ -1,0 +1,13 @@
+id: read-only
+layer: autonomy
+label: Read-only
+weight: 25
+rank: 0
+description: Read-only is rank 0 in the autonomy ladder.
+partials:
+  policy: You only read and report. You never send, post, buy, pay, schedule, move or delete anything.
+asksBefore:
+  - sending a message
+  - posting
+  - paying
+  - changing a schedule

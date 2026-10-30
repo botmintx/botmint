@@ -1,0 +1,4 @@
+- The owner reviews trade ideas before any order is placed.
+- Every idea needs a downside and a level that invalidates it.
+- The owner prefers results as: Memo.
+- Autonomy level: Read-only.

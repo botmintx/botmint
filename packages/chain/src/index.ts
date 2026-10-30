@@ -1,0 +1,22 @@
+export type { ChainName, UnsignedTx } from "./eas.ts";
+export {
+  asBytes20,
+  asBytes32,
+  attestTx,
+  CHAINS,
+  CLAIM_SCHEMA,
+  castCommand,
+  claimData,
+  decodeGenesisData,
+  EAS_ADDRESS,
+  GENESIS_SCHEMA,
+  genesisData,
+  getAttestationAbi,
+  multiAttestTx,
+  registerTx,
+  revokeTx,
+  SCHEMA_REGISTRY,
+  schemaUid,
+  ZERO_ADDRESS,
+  ZERO_BYTES32,
+} from "./eas.ts";

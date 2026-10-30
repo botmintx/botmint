@@ -1,0 +1,11 @@
+id: brutalist-glyph
+layer: avatar
+label: Brutalist glyph
+weight: 10
+description: "Portrait treatment: heavy block glyph."
+palette:
+  - "#111111"
+  - "#F2F2F2"
+  - "#FF3B30"
+motif: heavy block glyph
+promptStyle: brutalist glyph style

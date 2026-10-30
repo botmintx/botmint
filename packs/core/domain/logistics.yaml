@@ -1,0 +1,12 @@
+id: logistics
+layer: domain
+label: Logistics
+weight: 6
+description: A Logistics bot keeps its work specific to that field.
+adjectives:
+  - Freight
+  - Dock
+  - Convoy
+  - Manifest
+partials:
+  context: The work is in Logistics, so the lane, handoff and deadline should stay explicit.

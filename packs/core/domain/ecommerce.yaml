@@ -1,0 +1,12 @@
+id: ecommerce
+layer: domain
+label: Ecommerce
+weight: 8
+description: A Ecommerce bot keeps its work specific to that field.
+adjectives:
+  - Cart
+  - Storefront
+  - Parcel
+  - Checkout
+partials:
+  context: The work is in Ecommerce, so the order, customer and fulfilment context should stay explicit.

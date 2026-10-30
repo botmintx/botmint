@@ -1,0 +1,12 @@
+id: post-drafts
+layer: skill
+label: Post drafts
+weight: 5
+description: When the owner wants X posts or threads drafted in their voice.
+skillDescription: When the owner wants X posts or threads drafted in their voice.
+partials:
+  body: Draft {{domain.label}} posts for {{name}} in the owner's voice. Offer a short post and, when
+    it helps, a thread. Leave posting to the owner.
+needs:
+  connectors:
+    - x

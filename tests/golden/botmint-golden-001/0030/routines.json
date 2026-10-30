@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat in three sentences or fewer.",
+    "name": "premarket-weekday-analyst",
+    "prompt": "Review what changed in Real Estate since the last run. Lead with the few developments that matter, name the source of each point, and flag anything uncertain.\n\nBring in Daily digest, Market brief and Notion notes where they fit.",
+    "schedule": "47 7 * * 1-5",
+    "trigger": null
+  }
+]

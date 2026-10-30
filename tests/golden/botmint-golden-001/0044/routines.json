@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat as a short summary I can listen to.",
+    "name": "twice-daily-ops-coordinator",
+    "prompt": "Collect the Commodities status since the last run. Name blockers, owners and what slipped, and draft the update for the owner to share.\n\nBring in Content calendar, Daily digest and Meeting prep where they fit.",
+    "schedule": "11 9,15 * * 1-5",
+    "trigger": null
+  }
+]

@@ -1,0 +1,10 @@
+id: line-art
+layer: avatar
+label: Line-art
+weight: 9
+description: "Portrait treatment: single-line portrait."
+palette:
+  - "#FFFFFF"
+  - "#222222"
+motif: single-line portrait
+promptStyle: line-art style

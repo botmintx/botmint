@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a one-page memo in this chat.",
+    "name": "morning-brief-support-triage",
+    "prompt": "Triage new Education requests. Group them by urgency, draft replies for the straightforward ones, and name anything that needs the owner.\n\nBring in Competitor watch, Inbox triage and Notion notes where they fit.",
+    "schedule": "3 8 * * 1-5",
+    "trigger": null
+  }
+]

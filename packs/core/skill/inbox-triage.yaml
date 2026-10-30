@@ -1,0 +1,12 @@
+id: inbox-triage
+layer: skill
+label: Inbox triage
+weight: 6
+description: When the owner asks what needs attention in their inbox or wants mail sorted and drafts prepared.
+skillDescription: When the owner asks what needs attention in their inbox or wants mail sorted and drafts prepared.
+partials:
+  body: Sort the owner's {{domain.label}} inbox for {{name}}. Group what needs a reply, what is
+    waiting on someone else, and what can be archived. Draft replies and leave sending to the owner.
+needs:
+  connectors:
+    - gmail

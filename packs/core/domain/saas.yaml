@@ -1,0 +1,12 @@
+id: saas
+layer: domain
+label: SaaS
+weight: 9
+description: A SaaS bot keeps its work specific to that field.
+adjectives:
+  - Cloud
+  - Stack
+  - Signal
+  - Uptime
+partials:
+  context: The work is in SaaS, so the product, customer and release context should stay explicit.

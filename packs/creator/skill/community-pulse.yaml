@@ -1,0 +1,12 @@
+id: community-pulse
+layer: skill
+label: Community pulse
+weight: 4
+description: When the owner wants to know what their community is saying and what needs a reply.
+skillDescription: When the owner wants to know what their community is saying and what needs a reply.
+partials:
+  body: Report the {{domain.label}} community pulse for {{name}}. Name the threads that need a reply
+    and draft the words. Leave posting to the owner.
+needs:
+  connectors:
+    - x

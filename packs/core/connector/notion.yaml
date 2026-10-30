@@ -1,0 +1,8 @@
+id: notion
+layer: connector
+label: Notion
+weight: 10
+description: Connects the bot to Notion.
+marketplaceId: null
+aliases:
+  - Notion

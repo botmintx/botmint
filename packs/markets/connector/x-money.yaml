@@ -1,0 +1,14 @@
+id: x-money
+layer: connector
+label: X Money
+weight: 4
+description: Connects the bot to X Money.
+marketplaceId: null
+aliases:
+  - X Money
+allowedOn:
+  archetype:
+    - payments-assistant
+caps:
+  autonomy: approve-to-act
+payment: true

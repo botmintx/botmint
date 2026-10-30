@@ -1,0 +1,8 @@
+id: bullet-brief
+layer: output
+label: Bullet brief
+weight: 22
+description: The owner wants results as a bullet brief.
+deliveryLine: Send me the result as a short bullet brief in this chat.
+partials:
+  format: Write the result as a short bullet brief. Put the point in the first bullet.

@@ -1,0 +1,14 @@
+id: core
+version: 1.0.0
+title: botmint core pack
+license: MIT
+layers:
+  - archetype
+  - domain
+  - persona
+  - skill
+  - cadence
+  - connector
+  - autonomy
+  - output
+  - avatar

@@ -1,0 +1,9 @@
+id: daily-digest
+layer: skill
+label: Daily digest
+weight: 7
+description: When the owner wants one short digest of what changed today across their work.
+skillDescription: When the owner wants one short digest of what changed today across their work.
+partials:
+  body: Write one short {{domain.label}} digest for {{name}}. Lead with what changed, then what is
+    waiting, then what can wait until tomorrow.

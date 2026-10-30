@@ -1,0 +1,12 @@
+id: commodities
+layer: domain
+label: Commodities
+weight: 5
+description: A Commodities bot keeps its work specific to that field.
+adjectives:
+  - Crude
+  - Copper
+  - Harvest
+  - Bullion
+partials:
+  context: The work is in Commodities, so the product, unit and delivery window should stay explicit.

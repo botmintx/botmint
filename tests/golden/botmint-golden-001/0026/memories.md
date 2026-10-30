@@ -1,0 +1,4 @@
+- The owner approves any comment, merge or close.
+- Risk comes before a list of everything that moved.
+- The owner prefers results as: Chat-short.
+- Autonomy level: Approve-to-act.

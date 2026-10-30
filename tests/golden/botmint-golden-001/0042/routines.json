@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat in three sentences or fewer.",
+    "name": "twice-daily-trader",
+    "prompt": "Review overnight and pre-market moves in Equities. Prepare trade ideas with size, downside and what would prove the idea wrong. Leave every order for the owner to approve.\n\nBring in Market brief, Risk check and Sprint report where they fit.",
+    "schedule": "11 9,15 * * 1-5",
+    "trigger": null
+  }
+]

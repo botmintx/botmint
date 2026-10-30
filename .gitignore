@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.turbo/
+.next/
+out/
+.env
+coverage/
+*.tsbuildinfo
+__pycache__/
+*.pyc
+README.brand.md
+apps/gallery/public/brand/
+apps/gallery/public/sample/
+apps/gallery/data/
+# remove raw/polished lines at Genesis freeze (docs/genesis.md)
+collections/genesis/raw/
+collections/genesis/polished/

@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a short bullet brief in this chat.",
+    "name": "hourly-work-hours-researcher",
+    "prompt": "Survey new Healthcare material since the last run. Summarise what is new, what is still uncertain, and which sources the owner should read.\n\nBring in Competitor watch, Content calendar and Ticket triage where they fit.",
+    "schedule": "13 9-17 * * 1-5",
+    "trigger": null
+  }
+]

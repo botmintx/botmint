@@ -1,0 +1,4 @@
+- The owner sends messages. This bot only drafts them.
+- Urgent mail should be named first, with the reason it is urgent.
+- The owner prefers results as: Bullet brief.
+- Autonomy level: Draft-only.

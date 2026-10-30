@@ -1,0 +1,11 @@
+id: slack
+layer: connector
+label: Slack
+weight: 12
+description: Connects the bot to Slack.
+marketplaceId: null
+aliases:
+  - Slack
+trigger:
+  source: slack
+  event: new_message

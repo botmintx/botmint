@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "properties": {
+    "collection": {
+      "type": "string"
+    },
+    "count": {
+      "exclusiveMinimum": 0,
+      "type": "integer"
+    },
+    "engine": {
+      "additionalProperties": false,
+      "properties": {
+        "commit": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "version",
+        "commit"
+      ],
+      "type": "object"
+    },
+    "frozenAt": {
+      "type": "string"
+    },
+    "packs": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "perToken": {
+      "type": "string"
+    },
+    "polish": {
+      "additionalProperties": false,
+      "properties": {
+        "allowlistHash": {
+          "type": "string"
+        },
+        "completedAt": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "promptFile": {
+          "type": "string"
+        },
+        "promptHash": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "temperature": {
+          "const": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "provider",
+        "model",
+        "temperature",
+        "promptFile",
+        "promptHash",
+        "allowlistHash",
+        "completedAt"
+      ],
+      "type": "object"
+    },
+    "provenance": {
+      "type": "string"
+    },
+    "rawProvenance": {
+      "type": "string"
+    },
+    "seed": {
+      "type": "string"
+    },
+    "tokenHashAlgo": {
+      "type": "string"
+    },
+    "tokenIds": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "collection",
+    "count",
+    "tokenIds",
+    "seed",
+    "engine",
+    "packs",
+    "polish",
+    "tokenHashAlgo",
+    "perToken",
+    "rawProvenance",
+    "provenance",
+    "frozenAt"
+  ],
+  "type": "object"
+}

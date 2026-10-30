@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat in three sentences or fewer.",
+    "name": "morning-brief-sales-sdr",
+    "prompt": "Research the next Ecommerce leads and draft personal outreach for the owner to approve. Say why each lead fits, and do not invent details you could not check.\n\nBring in Competitor watch, Issue triage and Standup summary where they fit.",
+    "schedule": "3 8 * * 1-5",
+    "trigger": null
+  }
+]

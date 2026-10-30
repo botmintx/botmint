@@ -1,0 +1,12 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat, leading with a table.",
+    "name": "event-driven-researcher",
+    "prompt": "Survey new Commodities material since the last run. Summarise what is new, what is still uncertain, and which sources the owner should read.\n\nBring in Document summary, Inbox triage and Ticket triage where they fit.",
+    "schedule": null,
+    "trigger": {
+      "event": "new_message",
+      "source": "slack"
+    }
+  }
+]

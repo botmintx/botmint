@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "properties": {
+    "exportedAt": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "source": {
+      "const": "x-money get_transactions",
+      "type": "string"
+    },
+    "transactions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "amountUsd": {
+            "pattern": "^\\d+\\.\\d{2}$",
+            "type": "string"
+          },
+          "createdAt": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "direction": {
+            "enum": [
+              "in",
+              "out"
+            ],
+            "type": "string"
+          },
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "payer": {
+            "additionalProperties": false,
+            "properties": {
+              "handle": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "userId": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "handle",
+              "userId"
+            ],
+            "type": "object"
+          },
+          "status": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "createdAt",
+          "status",
+          "direction",
+          "amountUsd",
+          "note",
+          "payer"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "exportedAt",
+    "source",
+    "transactions"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat in three sentences or fewer.",
+    "name": "morning-brief-dev-assistant",
+    "prompt": "Summarise new Logistics reviews and issues. Lead with risk, then with what is ready for the owner, and do not merge or close anything.\n\nBring in Content calendar, Daily digest and Pull request review where they fit.",
+    "schedule": "3 8 * * 1-5",
+    "trigger": null
+  }
+]

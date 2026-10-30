@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "type": "string"
+    },
+    "layers": {
+      "items": {
+        "enum": [
+          "archetype",
+          "domain",
+          "persona",
+          "skill",
+          "cadence",
+          "connector",
+          "autonomy",
+          "output",
+          "avatar"
+        ],
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "license": {
+      "const": "MIT",
+      "type": "string"
+    },
+    "names": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "title": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "version": {
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "version",
+    "title",
+    "license",
+    "layers"
+  ],
+  "type": "object"
+}

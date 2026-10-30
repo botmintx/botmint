@@ -1,0 +1,12 @@
+id: outreach-drafts
+layer: skill
+label: Outreach drafts
+weight: 4
+description: When the owner wants personalised outreach emails drafted for review.
+skillDescription: When the owner wants personalised outreach emails drafted for review.
+partials:
+  body: Draft personalised {{domain.label}} outreach for {{name}} to review. One note per lead, with a
+    reason it is specific. Leave sending to the owner.
+needs:
+  connectors:
+    - gmail

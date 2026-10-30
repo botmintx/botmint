@@ -1,0 +1,41 @@
+{
+  "name": "botmint-workspace",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.4",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "test": "vitest run",
+    "lint": "biome ci .",
+    "format": "biome check --write .",
+    "schema": "node --experimental-strip-types scripts/schema.ts",
+    "sample": "node --experimental-strip-types scripts/render-committed.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.6",
+    "@botmint/chain": "workspace:*",
+    "@botmint/claims": "workspace:*",
+    "@botmint/composer": "workspace:*",
+    "@botmint/core": "workspace:*",
+    "@botmint/exporters": "workspace:*",
+    "@botmint/lint": "workspace:*",
+    "@botmint/polish": "workspace:*",
+    "botmint": "workspace:*",
+    "@changesets/cli": "2.29.7",
+    "@types/node": "24.9.1",
+    "turbo": "2.5.8",
+    "typescript": "5.9.3",
+    "vitest": "3.2.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "@biomejs/biome",
+      "sharp"
+    ]
+  }
+}

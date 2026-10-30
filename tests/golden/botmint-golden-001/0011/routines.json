@@ -1,0 +1,12 @@
+[
+  {
+    "deliveryLine": "Send me the result as a Page and share the link in this chat.",
+    "name": "event-driven-content-creator",
+    "prompt": "Draft the next Ecommerce posts in the owner's voice and update the content plan. Mark anything that needs a fact check before the owner posts it.\n\nBring in Candidate screen, Document summary and Notion notes where they fit.",
+    "schedule": null,
+    "trigger": {
+      "event": "new_email",
+      "source": "email"
+    }
+  }
+]

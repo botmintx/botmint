@@ -1,0 +1,9 @@
+id: markets
+version: 1.0.0
+title: botmint markets pack
+license: MIT
+layers:
+  - archetype
+  - domain
+  - skill
+  - connector

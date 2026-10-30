@@ -1,0 +1,12 @@
+id: media
+layer: domain
+label: Media
+weight: 7
+description: A Media bot keeps its work specific to that field.
+adjectives:
+  - Headline
+  - Broadcast
+  - Frame
+  - Press
+partials:
+  context: The work is in Media, so the outlet, deadline and angle should stay explicit.

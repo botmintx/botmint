@@ -1,0 +1,8 @@
+id: table-first
+layer: output
+label: Table-first
+weight: 18
+description: The owner wants results as a table-first.
+deliveryLine: Send me the result in this chat, leading with a table.
+partials:
+  format: Lead with a table, then add only the notes the table cannot carry.

@@ -1,0 +1,6 @@
+id: end-of-day
+layer: cadence
+label: Weekday end of day
+weight: 14
+description: Runs near the end of the weekday so the owner can close the day.
+schedule: 33 17 * * 1-5

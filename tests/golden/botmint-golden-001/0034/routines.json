@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a one-page memo in this chat.",
+    "name": "hourly-work-hours-chief-of-staff",
+    "prompt": "Prepare the owner's Legal day. List decisions that need them, meetings worth a brief, and anything that slipped since the last run.\n\nBring in Daily digest, Meeting prep and Post drafts where they fit.",
+    "schedule": "13 9-17 * * 1-5",
+    "trigger": null
+  }
+]

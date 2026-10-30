@@ -1,0 +1,8 @@
+id: chat-short
+layer: output
+label: Chat-short
+weight: 20
+description: The owner wants results as a chat-short.
+deliveryLine: Send me the result in this chat in three sentences or fewer.
+partials:
+  format: Keep the result to three sentences or fewer unless the owner asks for more.

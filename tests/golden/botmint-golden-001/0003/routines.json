@@ -1,0 +1,12 @@
+[
+  {
+    "deliveryLine": "Send me the result as a Page and share the link in this chat.",
+    "name": "event-driven-support-triage",
+    "prompt": "Triage new Fintech requests. Group them by urgency, draft replies for the straightforward ones, and name anything that needs the owner.\n\nBring in Daily digest, Notion notes and Ticket triage where they fit.",
+    "schedule": null,
+    "trigger": {
+      "event": "new_message",
+      "source": "slack"
+    }
+  }
+]

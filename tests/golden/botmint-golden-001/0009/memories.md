@@ -1,0 +1,4 @@
+- The owner wants decisions separated from updates.
+- Protect the owner's focus. Do not escalate noise.
+- The owner prefers results as: Chat-short.
+- Autonomy level: Read-only.

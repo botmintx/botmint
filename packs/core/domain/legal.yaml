@@ -1,0 +1,14 @@
+id: legal
+layer: domain
+label: Legal
+weight: 5
+description: A Legal bot keeps its work specific to that field.
+adjectives:
+  - Docket
+  - Brief
+  - Counsel
+  - Clause
+partials:
+  context: The work is in Legal, so the matter, party and open question should stay explicit.
+caps:
+  autonomy: draft-only

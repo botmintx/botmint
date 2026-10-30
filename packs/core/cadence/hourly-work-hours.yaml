@@ -1,0 +1,6 @@
+id: hourly-work-hours
+layer: cadence
+label: Hourly in work hours
+weight: 10
+description: Runs once an hour through the weekday work window.
+schedule: 13 9-17 * * 1-5

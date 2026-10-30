@@ -1,0 +1,6 @@
+id: friday-wrap
+layer: cadence
+label: Friday wrap
+weight: 10
+description: Runs on Friday afternoon so the owner can wrap the week.
+schedule: 17 16 * * 5

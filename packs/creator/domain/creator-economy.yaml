@@ -1,0 +1,12 @@
+id: creator-economy
+layer: domain
+label: Creator Economy
+weight: 9
+description: A Creator Economy bot keeps its work specific to that field.
+adjectives:
+  - Studio
+  - Patron
+  - Remix
+  - Canvas
+partials:
+  context: The work is in Creator Economy, so the audience, offer and date should stay explicit.

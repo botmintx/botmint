@@ -1,0 +1,833 @@
+{
+  "collection": "dev-sample",
+  "count": 25,
+  "engineVersion": "1.0.0",
+  "seed": "botmint-dev-sample-001",
+  "tokens": [
+    {
+      "dna": "f4a1dc1bf56cd984",
+      "edition": 1,
+      "featuredUrl": null,
+      "name": "Compass Mentor - Travel Content Producer",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 8,
+        "score": 32.3503,
+        "tier": "uncommon"
+      },
+      "rawHash": "ce5be5742403a024ffa265f57ce66abe7f6e4f9fb3ab0f7f16143ffa9d61aa99",
+      "slug": "compass-mentor-travel-content-producer",
+      "tokenId": "#0001",
+      "traits": {
+        "archetype": "content-creator",
+        "autonomy": "approve-to-act",
+        "avatar": "low-poly",
+        "cadence": "monday-review",
+        "connectors": [
+          "gmail",
+          "slack"
+        ],
+        "domain": "travel",
+        "output": "chat-short",
+        "persona": "friendly-teacher",
+        "skills": [
+          "doc-summarizer",
+          "inbox-triage",
+          "ticket-triage"
+        ]
+      }
+    },
+    {
+      "dna": "a60aba0b5b155e07",
+      "edition": 2,
+      "featuredUrl": null,
+      "name": "Mint Mentor - Fintech Community Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 5,
+        "score": 33.3973,
+        "tier": "uncommon"
+      },
+      "rawHash": "297f794fb0b79e2c502daabb964bfe9c83fcd1a01c38b071e407bbcafb2c0564",
+      "slug": "mint-mentor-fintech-community-lead",
+      "tokenId": "#0002",
+      "traits": {
+        "archetype": "community-manager",
+        "autonomy": "read-only",
+        "avatar": "blueprint",
+        "cadence": "morning-brief",
+        "connectors": [
+          "calendar",
+          "social-scheduler"
+        ],
+        "domain": "fintech",
+        "output": "page-report",
+        "persona": "friendly-teacher",
+        "skills": [
+          "content-calendar",
+          "doc-summarizer",
+          "meeting-prep"
+        ]
+      }
+    },
+    {
+      "dna": "9d3d6b78647bba53",
+      "edition": 3,
+      "featuredUrl": null,
+      "name": "Pixel Margin - Gaming Operations Coordinator",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 3,
+        "score": 34.6197,
+        "tier": "rare"
+      },
+      "rawHash": "8a3a2dae63f33437a4ac91afaab6a3a734763d3b65109a819c82bdb0337fe3f5",
+      "slug": "pixel-margin-gaming-operations-coordinator",
+      "tokenId": "#0003",
+      "traits": {
+        "archetype": "ops-coordinator",
+        "autonomy": "read-only",
+        "avatar": "risograph",
+        "cadence": "hourly-work-hours",
+        "connectors": [
+          "calendar",
+          "github"
+        ],
+        "domain": "gaming",
+        "output": "voice-note",
+        "persona": "meticulous-auditor",
+        "skills": [
+          "doc-summarizer",
+          "meeting-prep",
+          "pr-review"
+        ]
+      }
+    },
+    {
+      "dna": "595905b38c7921a0",
+      "edition": 4,
+      "featuredUrl": null,
+      "name": "Press Sunbeam - Media Sales Development Rep",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 21,
+        "score": 27.8908,
+        "tier": "common"
+      },
+      "rawHash": "88796b475846c6841c8c30ff78255717d6d8b7ca67d1aef29e4e96dec820e3ae",
+      "slug": "press-sunbeam-media-sales-development-rep",
+      "tokenId": "#0004",
+      "traits": {
+        "archetype": "sales-sdr",
+        "autonomy": "approve-to-act",
+        "avatar": "neon-noir",
+        "cadence": "premarket-weekday",
+        "connectors": [
+          "gmail",
+          "slack"
+        ],
+        "domain": "media",
+        "output": "bullet-brief",
+        "persona": "upbeat-coach",
+        "skills": [
+          "daily-digest",
+          "inbox-triage",
+          "standup-summary"
+        ]
+      }
+    },
+    {
+      "dna": "a55de57c039e2398",
+      "edition": 5,
+      "featuredUrl": null,
+      "name": "Jetstream Tide - Travel Sales Development Rep",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 22,
+        "score": 27.7273,
+        "tier": "common"
+      },
+      "rawHash": "9cf45698b76c77026dc580c428acd0504165688fa2822c362806f50be9ed0f8c",
+      "slug": "jetstream-tide-travel-sales-development-rep",
+      "tokenId": "#0005",
+      "traits": {
+        "archetype": "sales-sdr",
+        "autonomy": "approve-to-act",
+        "avatar": "ascii",
+        "cadence": "twice-daily",
+        "connectors": [
+          "market-data",
+          "notion"
+        ],
+        "domain": "travel",
+        "output": "page-report",
+        "persona": "calm-diplomat",
+        "skills": [
+          "daily-digest",
+          "market-brief",
+          "notion-sync"
+        ]
+      }
+    },
+    {
+      "dna": "c1f89a0ab096734d",
+      "edition": 6,
+      "featuredUrl": null,
+      "name": "Canvas Switch - Creator Economy Chief of Staff",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 7,
+        "score": 32.3827,
+        "tier": "uncommon"
+      },
+      "rawHash": "023b33df3a06ce4b9a847f3751e64146849703a0c7b3efeb56d06f0aba328841",
+      "slug": "canvas-switch-creator-economy-chief-of-staff",
+      "tokenId": "#0006",
+      "traits": {
+        "archetype": "chief-of-staff",
+        "autonomy": "approve-to-act",
+        "avatar": "vaporwave",
+        "cadence": "friday-wrap",
+        "connectors": [
+          "gmail",
+          "slack"
+        ],
+        "domain": "creator-economy",
+        "output": "page-report",
+        "persona": "terse-operator",
+        "skills": [
+          "candidate-screen",
+          "daily-digest",
+          "standup-summary"
+        ]
+      }
+    },
+    {
+      "dna": "d7851c64b80d2bbc",
+      "edition": 7,
+      "featuredUrl": null,
+      "name": "Cart Envoy - Ecommerce Content Producer",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 24,
+        "score": 27.2534,
+        "tier": "common"
+      },
+      "rawHash": "1f3aca6e3d148756532cc2a86c6ce40168b6321b937c0bbfe558b9427871d7e6",
+      "slug": "cart-envoy-ecommerce-content-producer",
+      "tokenId": "#0007",
+      "traits": {
+        "archetype": "content-creator",
+        "autonomy": "approve-to-act",
+        "avatar": "ascii",
+        "cadence": "monday-review",
+        "connectors": [
+          "calendar",
+          "github"
+        ],
+        "domain": "ecommerce",
+        "output": "voice-note",
+        "persona": "calm-diplomat",
+        "skills": [
+          "daily-digest",
+          "issue-triage",
+          "meeting-prep"
+        ]
+      }
+    },
+    {
+      "dna": "31cec47cc8cb8a99",
+      "edition": 8,
+      "featuredUrl": null,
+      "name": "Lecture Sunbeam - Education Operations Coordinator",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 23,
+        "score": 27.5689,
+        "tier": "common"
+      },
+      "rawHash": "3e1021d9d5341fca3c78b9423543721c76cb64a1b7763e3c827c9e3479f386f2",
+      "slug": "lecture-sunbeam-education-operations-coordinator",
+      "tokenId": "#0008",
+      "traits": {
+        "archetype": "ops-coordinator",
+        "autonomy": "draft-only",
+        "avatar": "holographic",
+        "cadence": "morning-brief",
+        "connectors": [
+          "github",
+          "gmail"
+        ],
+        "domain": "education",
+        "output": "page-report",
+        "persona": "upbeat-coach",
+        "skills": [
+          "candidate-screen",
+          "daily-digest",
+          "issue-triage"
+        ]
+      }
+    },
+    {
+      "dna": "13fd3fb3f213d0c3",
+      "edition": 9,
+      "featuredUrl": null,
+      "name": "Satoshi Lantern - Crypto Trading Analyst",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 17,
+        "score": 29.0981,
+        "tier": "common"
+      },
+      "rawHash": "cf54c24cba0807b2084110c3080d403167af9d64c1a127c2edd2c3d369fd2c43",
+      "slug": "satoshi-lantern-crypto-trading-analyst",
+      "tokenId": "#0009",
+      "traits": {
+        "archetype": "trader",
+        "autonomy": "draft-only",
+        "avatar": "neon-noir",
+        "cadence": "monday-review",
+        "connectors": [
+          "calendar",
+          "market-data"
+        ],
+        "domain": "crypto",
+        "output": "table-first",
+        "persona": "warm-concierge",
+        "skills": [
+          "competitor-watch",
+          "market-brief",
+          "meeting-prep"
+        ]
+      }
+    },
+    {
+      "dna": "cf6c70910e00cafb",
+      "edition": 10,
+      "featuredUrl": null,
+      "name": "Onchain Rally - Crypto Trading Analyst",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 10,
+        "score": 31.9941,
+        "tier": "uncommon"
+      },
+      "rawHash": "78e740bc8a15b5a3c600516156e259c5601cfd4afb0d1226ee38185a821a6edc",
+      "slug": "onchain-rally-crypto-trading-analyst",
+      "tokenId": "#0010",
+      "traits": {
+        "archetype": "trader",
+        "autonomy": "draft-only",
+        "avatar": "neon-noir",
+        "cadence": "end-of-day",
+        "connectors": [
+          "market-data",
+          "social-scheduler"
+        ],
+        "domain": "crypto",
+        "output": "memo",
+        "persona": "upbeat-coach",
+        "skills": [
+          "content-calendar",
+          "market-brief",
+          "risk-check"
+        ]
+      }
+    },
+    {
+      "dna": "4e69ca4cf0b514a1",
+      "edition": 11,
+      "featuredUrl": null,
+      "name": "Triage Prism - Healthcare Research Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 1,
+        "score": 35.3973,
+        "tier": "epic"
+      },
+      "rawHash": "dda938d08d6df7646aa8c2c96d5b2789aa5c6820c40cf01388b6508df8a73899",
+      "slug": "triage-prism-healthcare-research-lead",
+      "tokenId": "#0011",
+      "traits": {
+        "archetype": "researcher",
+        "autonomy": "read-only",
+        "avatar": "line-art",
+        "cadence": "monday-review",
+        "connectors": [
+          "calendar",
+          "notion"
+        ],
+        "domain": "healthcare",
+        "output": "page-report",
+        "persona": "skeptical-researcher",
+        "skills": [
+          "doc-summarizer",
+          "meeting-prep",
+          "notion-sync"
+        ]
+      }
+    },
+    {
+      "dna": "4c8cb8eb9ee54e19",
+      "edition": 12,
+      "featuredUrl": null,
+      "name": "Index Margin - Equities Inbox Manager",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 9,
+        "score": 32.2047,
+        "tier": "uncommon"
+      },
+      "rawHash": "cc60e307ad3e4ec3cdadd9ee07751fb432b5bbf99fdb67542e44bd25095dee64",
+      "slug": "index-margin-equities-inbox-manager",
+      "tokenId": "#0012",
+      "traits": {
+        "archetype": "inbox-manager",
+        "autonomy": "read-only",
+        "avatar": "low-poly",
+        "cadence": "morning-brief",
+        "connectors": [
+          "gmail",
+          "linear"
+        ],
+        "domain": "equities",
+        "output": "memo",
+        "persona": "meticulous-auditor",
+        "skills": [
+          "competitor-watch",
+          "inbox-triage",
+          "sprint-report"
+        ]
+      }
+    },
+    {
+      "dna": "10144ed44897cff8",
+      "edition": 13,
+      "featuredUrl": null,
+      "name": "Vault Gambit - Fintech Engineering Assistant",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 6,
+        "score": 33.3827,
+        "tier": "uncommon"
+      },
+      "rawHash": "fc4f69c73f56f32eb2dfce67dbf80ca0e341c7f7754d40361144616922c2cedb",
+      "slug": "vault-gambit-fintech-engineering-assistant",
+      "tokenId": "#0013",
+      "traits": {
+        "archetype": "dev-assistant",
+        "autonomy": "draft-only",
+        "avatar": "isometric",
+        "cadence": "twice-daily",
+        "connectors": [
+          "github",
+          "notion"
+        ],
+        "domain": "fintech",
+        "output": "page-report",
+        "persona": "bold-strategist",
+        "skills": [
+          "daily-digest",
+          "issue-triage",
+          "notion-sync"
+        ]
+      }
+    },
+    {
+      "dna": "fe9fcce4424f9a65",
+      "edition": 14,
+      "featuredUrl": null,
+      "name": "Storefront Vanguard - Ecommerce Operations Coordinator",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 18,
+        "score": 28.4758,
+        "tier": "common"
+      },
+      "rawHash": "9fc4681120b4ce08b5c140e6a4838c68df2836dcd83cedabbc73b349b51e85ef",
+      "slug": "storefront-vanguard-ecommerce-operations-coordinator",
+      "tokenId": "#0014",
+      "traits": {
+        "archetype": "ops-coordinator",
+        "autonomy": "approve-to-act",
+        "avatar": "pixel",
+        "cadence": "end-of-day",
+        "connectors": [
+          "gmail",
+          "slack"
+        ],
+        "domain": "ecommerce",
+        "output": "memo",
+        "persona": "bold-strategist",
+        "skills": [
+          "daily-digest",
+          "inbox-triage",
+          "standup-summary"
+        ]
+      }
+    },
+    {
+      "dna": "f21d3bda76e01f61",
+      "edition": 15,
+      "featuredUrl": null,
+      "name": "Press Envoy - Media Chief of Staff",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 12,
+        "score": 31.1196,
+        "tier": "common"
+      },
+      "rawHash": "3f603c5faee7e36ecde2db8a9d7e81a11ef63d4a6e7dc3ac5a3b2ec09e322452",
+      "slug": "press-envoy-media-chief-of-staff",
+      "tokenId": "#0015",
+      "traits": {
+        "archetype": "chief-of-staff",
+        "autonomy": "bounded-autonomous",
+        "avatar": "holographic",
+        "cadence": "hourly-work-hours",
+        "connectors": [
+          "market-data",
+          "notion"
+        ],
+        "domain": "media",
+        "output": "chat-short",
+        "persona": "calm-diplomat",
+        "skills": [
+          "daily-digest",
+          "market-brief",
+          "notion-sync"
+        ]
+      }
+    },
+    {
+      "dna": "e3a24daf9409761b",
+      "edition": 16,
+      "featuredUrl": null,
+      "name": "Checkout Sunbeam - Ecommerce Content Producer",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 20,
+        "score": 27.9612,
+        "tier": "common"
+      },
+      "rawHash": "232135f6cb286347865b3b56c83966bb8b6ab5f059c8b4381daeb0d29618160c",
+      "slug": "checkout-sunbeam-ecommerce-content-producer",
+      "tokenId": "#0016",
+      "traits": {
+        "archetype": "content-creator",
+        "autonomy": "draft-only",
+        "avatar": "risograph",
+        "cadence": "hourly-work-hours",
+        "connectors": [
+          "github",
+          "slack"
+        ],
+        "domain": "ecommerce",
+        "output": "table-first",
+        "persona": "upbeat-coach",
+        "skills": [
+          "daily-digest",
+          "issue-triage",
+          "standup-summary"
+        ]
+      }
+    },
+    {
+      "dna": "65ab02e7b8d9c3c3",
+      "edition": 17,
+      "featuredUrl": null,
+      "name": "Jetstream Skeptic - Travel Chief of Staff",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 11,
+        "score": 31.4091,
+        "tier": "common"
+      },
+      "rawHash": "d7664090e7ccd84c423293dae46e2891c4781b892779a9cfbd0a8f55bd80d164",
+      "slug": "jetstream-skeptic-travel-chief-of-staff",
+      "tokenId": "#0017",
+      "traits": {
+        "archetype": "chief-of-staff",
+        "autonomy": "draft-only",
+        "avatar": "risograph",
+        "cadence": "event-driven",
+        "connectors": [
+          "gmail",
+          "linear"
+        ],
+        "domain": "travel",
+        "output": "memo",
+        "persona": "skeptical-researcher",
+        "skills": [
+          "competitor-watch",
+          "outreach-drafts",
+          "sprint-report"
+        ]
+      }
+    },
+    {
+      "dna": "a2c60baf1eaeaba8",
+      "edition": 18,
+      "featuredUrl": null,
+      "name": "Cart Lens - Ecommerce Support Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 13,
+        "score": 30.9352,
+        "tier": "common"
+      },
+      "rawHash": "6c2baea75cc1dc61ffce469c3fc8036150ea5dc1d21780da1f9b8b30a12f6826",
+      "slug": "cart-lens-ecommerce-support-lead",
+      "tokenId": "#0018",
+      "traits": {
+        "archetype": "support-triage",
+        "autonomy": "approve-to-act",
+        "avatar": "ascii",
+        "cadence": "premarket-weekday",
+        "connectors": [
+          "github",
+          "linear"
+        ],
+        "domain": "ecommerce",
+        "output": "bullet-brief",
+        "persona": "skeptical-researcher",
+        "skills": [
+          "competitor-watch",
+          "issue-triage",
+          "sprint-report"
+        ]
+      }
+    },
+    {
+      "dna": "fa057fde2a8f60d3",
+      "edition": 19,
+      "featuredUrl": null,
+      "name": "Broadcast Guide - Media Inbox Manager",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 14,
+        "score": 30.5429,
+        "tier": "common"
+      },
+      "rawHash": "d78dc94454c832ef3645782083541d90c6e996d140c3d30a9bf91e7cbfe6e9ae",
+      "slug": "broadcast-guide-media-inbox-manager",
+      "tokenId": "#0019",
+      "traits": {
+        "archetype": "inbox-manager",
+        "autonomy": "bounded-autonomous",
+        "avatar": "pixel",
+        "cadence": "morning-brief",
+        "connectors": [
+          "gmail",
+          "market-data"
+        ],
+        "domain": "media",
+        "output": "table-first",
+        "persona": "friendly-teacher",
+        "skills": [
+          "competitor-watch",
+          "market-brief",
+          "outreach-drafts"
+        ]
+      }
+    },
+    {
+      "dna": "6995689227bf89ef",
+      "edition": 20,
+      "featuredUrl": null,
+      "name": "Campus Quorum - Education Operations Coordinator",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 15,
+        "score": 29.9315,
+        "tier": "common"
+      },
+      "rawHash": "210f8bc3948ea91af1e4e6c02b1ed6a0720ea2a4b376972316ff14a5e767a791",
+      "slug": "campus-quorum-education-operations-coordinator",
+      "tokenId": "#0020",
+      "traits": {
+        "archetype": "ops-coordinator",
+        "autonomy": "approve-to-act",
+        "avatar": "claymation",
+        "cadence": "monday-review",
+        "connectors": [
+          "calendar",
+          "gmail"
+        ],
+        "domain": "education",
+        "output": "bullet-brief",
+        "persona": "stoic-quant",
+        "skills": [
+          "daily-digest",
+          "meeting-prep",
+          "outreach-drafts"
+        ]
+      }
+    },
+    {
+      "dna": "fc955d5da478695f",
+      "edition": 21,
+      "featuredUrl": null,
+      "name": "Patron Auditor - Creator Economy Content Producer",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 16,
+        "score": 29.2571,
+        "tier": "common"
+      },
+      "rawHash": "9354dbf615f703c3236591a87aad6f878711e55b0313ebd61a3ba09a489450a2",
+      "slug": "patron-auditor-creator-economy-content-producer",
+      "tokenId": "#0021",
+      "traits": {
+        "archetype": "content-creator",
+        "autonomy": "draft-only",
+        "avatar": "holographic",
+        "cadence": "hourly-work-hours",
+        "connectors": [
+          "gmail",
+          "social-scheduler"
+        ],
+        "domain": "creator-economy",
+        "output": "table-first",
+        "persona": "meticulous-auditor",
+        "skills": [
+          "content-calendar",
+          "inbox-triage",
+          "outreach-drafts"
+        ]
+      }
+    },
+    {
+      "dna": "3a03c4f7f9bb5fa8",
+      "edition": 22,
+      "featuredUrl": null,
+      "name": "Clause Auditor - Legal Operations Coordinator",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 2,
+        "score": 35.1051,
+        "tier": "rare"
+      },
+      "rawHash": "f721712c844f39b75271c9824e60062ff279ba9059dd77e2b8410a43310a8cc5",
+      "slug": "clause-auditor-legal-operations-coordinator",
+      "tokenId": "#0022",
+      "traits": {
+        "archetype": "ops-coordinator",
+        "autonomy": "draft-only",
+        "avatar": "blueprint",
+        "cadence": "twice-daily",
+        "connectors": [
+          "social-scheduler",
+          "x"
+        ],
+        "domain": "legal",
+        "output": "bullet-brief",
+        "persona": "meticulous-auditor",
+        "skills": [
+          "community-pulse",
+          "competitor-watch",
+          "content-calendar"
+        ]
+      }
+    },
+    {
+      "dna": "415e6c16d263754a",
+      "edition": 23,
+      "featuredUrl": null,
+      "name": "Gable Bolt - Real Estate Sales Development Rep",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 4,
+        "score": 33.9352,
+        "tier": "uncommon"
+      },
+      "rawHash": "9884568833a7c8bc1f76f80ffbfc5a583792af46e61e7b8288fcdc456d85145d",
+      "slug": "gable-bolt-real-estate-sales-development-rep",
+      "tokenId": "#0023",
+      "traits": {
+        "archetype": "sales-sdr",
+        "autonomy": "bounded-autonomous",
+        "avatar": "vaporwave",
+        "cadence": "morning-brief",
+        "connectors": [
+          "linear",
+          "market-data"
+        ],
+        "domain": "real-estate",
+        "output": "bullet-brief",
+        "persona": "terse-operator",
+        "skills": [
+          "market-brief",
+          "risk-check",
+          "sprint-report"
+        ]
+      }
+    },
+    {
+      "dna": "bc51098feb881e31",
+      "edition": 24,
+      "featuredUrl": null,
+      "name": "Brick Tide - Real Estate Chief of Staff",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 25,
+        "score": 27.157,
+        "tier": "common"
+      },
+      "rawHash": "6155274a0bf2dbb4841f38312caec64e29d502b1bb47f7952e464a929f777d29",
+      "slug": "brick-tide-real-estate-chief-of-staff",
+      "tokenId": "#0024",
+      "traits": {
+        "archetype": "chief-of-staff",
+        "autonomy": "approve-to-act",
+        "avatar": "ascii",
+        "cadence": "twice-daily",
+        "connectors": [
+          "gmail",
+          "market-data"
+        ],
+        "domain": "real-estate",
+        "output": "page-report",
+        "persona": "calm-diplomat",
+        "skills": [
+          "competitor-watch",
+          "inbox-triage",
+          "risk-check"
+        ]
+      }
+    },
+    {
+      "dna": "580b18cfe698a461",
+      "edition": 25,
+      "featuredUrl": null,
+      "name": "Counsel Steward - Legal Support Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 19,
+        "score": 28.183,
+        "tier": "common"
+      },
+      "rawHash": "c52a39e7a0fd9c5c9edac61aa42997aeaf43e8b66140e0e6c77faa72911a33f5",
+      "slug": "counsel-steward-legal-support-lead",
+      "tokenId": "#0025",
+      "traits": {
+        "archetype": "support-triage",
+        "autonomy": "draft-only",
+        "avatar": "neon-noir",
+        "cadence": "end-of-day",
+        "connectors": [
+          "calendar",
+          "gmail"
+        ],
+        "domain": "legal",
+        "output": "table-first",
+        "persona": "warm-concierge",
+        "skills": [
+          "daily-digest",
+          "inbox-triage",
+          "meeting-prep"
+        ]
+      }
+    }
+  ]
+}

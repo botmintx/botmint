@@ -1,0 +1,12 @@
+id: risograph
+layer: avatar
+label: Risograph
+weight: 8
+description: "Portrait treatment: halftone shapes."
+palette:
+  - "#FF48B0"
+  - "#0078BF"
+  - "#FFE800"
+  - "#F7F1E3"
+motif: halftone shapes
+promptStyle: risograph style

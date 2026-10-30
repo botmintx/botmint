@@ -1,0 +1,11 @@
+id: holographic
+layer: avatar
+label: Holographic
+weight: 8
+description: "Portrait treatment: iridescent orb."
+palette:
+  - "#8EC5FC"
+  - "#E0C3FC"
+  - "#F9F9F9"
+motif: iridescent orb
+promptStyle: holographic style

@@ -1,0 +1,4 @@
+- The owner approves any comment, merge or close.
+- Risk comes before a list of everything that moved.
+- The owner prefers results as: Table-first.
+- Autonomy level: Approve-to-act.

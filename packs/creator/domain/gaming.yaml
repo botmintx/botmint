@@ -1,0 +1,12 @@
+id: gaming
+layer: domain
+label: Gaming
+weight: 6
+description: A Gaming bot keeps its work specific to that field.
+adjectives:
+  - Respawn
+  - Pixel
+  - Arcade
+  - Quest
+partials:
+  context: The work is in Gaming, so the title, audience and moment should stay explicit.

@@ -1,0 +1,6 @@
+id: twice-daily
+layer: cadence
+label: Twice daily
+weight: 12
+description: Runs twice on weekdays, morning and mid-afternoon.
+schedule: 11 9,15 * * 1-5

@@ -1,0 +1,12 @@
+id: issue-triage
+layer: skill
+label: Issue triage
+weight: 4
+description: When new issues arrive and the owner wants them labelled, deduplicated and prioritised.
+skillDescription: When new issues arrive and the owner wants them labelled, deduplicated and prioritised.
+partials:
+  body: Triage new {{domain.label}} issues for {{name}}. Group duplicates, suggest a priority, and
+    draft the label change for the owner to approve.
+needs:
+  connectors:
+    - github

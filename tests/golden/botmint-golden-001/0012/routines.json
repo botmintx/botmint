@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a one-page memo in this chat.",
+    "name": "hourly-work-hours-support-triage",
+    "prompt": "Triage new Real Estate requests. Group them by urgency, draft replies for the straightforward ones, and name anything that needs the owner.\n\nBring in Document summary, Meeting prep and Sprint report where they fit.",
+    "schedule": "13 9-17 * * 1-5",
+    "trigger": null
+  }
+]

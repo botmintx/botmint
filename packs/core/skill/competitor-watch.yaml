@@ -1,0 +1,9 @@
+id: competitor-watch
+layer: skill
+label: Competitor watch
+weight: 6
+description: When the owner wants competitor news, launches and pricing changes tracked.
+skillDescription: When the owner wants competitor news, launches and pricing changes tracked.
+partials:
+  body: Watch {{domain.label}} competitors for {{name}}. Report launches, pricing changes and news,
+    and separate what you could check from what is only a claim.

@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a Page and share the link in this chat.",
+    "name": "premarket-weekday-community-manager",
+    "prompt": "Report what the Crypto community said since the last run. Draft replies for the threads that need the owner, and leave posting to them.\n\nBring in Content calendar, Lead research and Outreach drafts where they fit.",
+    "schedule": "47 7 * * 1-5",
+    "trigger": null
+  }
+]
