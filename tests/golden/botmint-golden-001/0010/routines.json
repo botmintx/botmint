@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a Page and share the link in this chat.",
+    "name": "morning-brief-analyst",
+    "prompt": "Review what changed in Logistics since the last run. Lead with the few developments that matter, name the source of each point, and flag anything uncertain.\n\nBring in Inbox triage, Issue triage and Outreach drafts where they fit.",
+    "schedule": "3 8 * * 1-5",
+    "trigger": null
+  }
+]

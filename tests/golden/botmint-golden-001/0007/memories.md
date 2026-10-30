@@ -1,0 +1,4 @@
+- The owner sends replies. This bot prepares them.
+- Urgent requests come first, with the reason they are urgent.
+- The owner prefers results as: Voice note.
+- Autonomy level: Draft-only.

@@ -1,0 +1,12 @@
+id: risk-check
+layer: skill
+label: Risk check
+weight: 4
+description: When the owner is weighing a trade idea and wants position size, downside and invalidation levels.
+skillDescription: When the owner is weighing a trade idea and wants position size, downside and invalidation levels.
+partials:
+  body: Check the {{domain.label}} idea the owner is weighing. State a cautious size, the downside,
+    and the level that would make the idea wrong. Do not place anything.
+needs:
+  connectors:
+    - market-data

@@ -1,0 +1,290 @@
+{
+  "combinations": 753984,
+  "tiers": {
+    "COMMON": 159488,
+    "UNCOMMON": 206080,
+    "RARE": 182784,
+    "LEGENDARY": 205632
+  },
+  "options": {
+    "Background": ["Mint Wash", "Carbon", "Paper", "Lilac", "Sky", "Butter", "Coral", "Sage"],
+    "Body": [
+      "Mint",
+      "Spearmint",
+      "Deep Mint",
+      "Fog",
+      "Graphite",
+      "Lilac",
+      "Cobalt",
+      "Sky",
+      "Gold",
+      "Obsidian",
+      "Glitch"
+    ],
+    "Eyes": ["Idle", "Joy", "Wink", "Wide", "Sleepy", "Glance", "Focus"],
+    "Headwear": ["None", "Cap", "Beanie", "Bucket Hat", "Crown", "Headphones", "Headband"],
+    "Eyewear": ["None", "Specs", "Shades", "Visor", "VR Goggles", "Monocle"],
+    "Clothing": ["Bare", "Tee", "Hoodie", "Bomber", "Turtleneck", "Puffer", "Blazer"],
+    "Accessory": ["None", "Chain", "Seed Pendant", "Scarf", "Lanyard"]
+  },
+  "one_of_ones": ["Full Bloom", "Spacewalk", "Blueprint"],
+  "grid": [
+    {
+      "no": 1,
+      "tier": "UNCOMMON",
+      "Background": "Paper",
+      "Body": "Mint",
+      "Eyes": "Idle",
+      "Headwear": "Cap",
+      "Eyewear": "None",
+      "Clothing": "Bomber",
+      "Accessory": "Chain"
+    },
+    {
+      "no": 217,
+      "tier": "COMMON",
+      "Background": "Sky",
+      "Body": "Fog",
+      "Eyes": "Wide",
+      "Headwear": "Beanie",
+      "Eyewear": "None",
+      "Clothing": "Tee",
+      "Accessory": "Chain"
+    },
+    {
+      "no": 1075,
+      "tier": "RARE",
+      "Background": "Carbon",
+      "Body": "Deep Mint",
+      "Eyes": "Wink",
+      "Headwear": "Headband",
+      "Eyewear": "Monocle",
+      "Clothing": "Bare",
+      "Accessory": "Chain"
+    },
+    {
+      "no": 2138,
+      "tier": "1/1",
+      "_1of1": "Spacewalk"
+    },
+    {
+      "no": 2469,
+      "tier": "COMMON",
+      "Background": "Lilac",
+      "Body": "Graphite",
+      "Eyes": "Idle",
+      "Headwear": "Headband",
+      "Eyewear": "None",
+      "Clothing": "Bomber",
+      "Accessory": "Lanyard"
+    },
+    {
+      "no": 2486,
+      "tier": "LEGENDARY",
+      "Background": "Coral",
+      "Body": "Obsidian",
+      "Eyes": "Idle",
+      "Headwear": "None",
+      "Eyewear": "Specs",
+      "Clothing": "Bomber",
+      "Accessory": "None"
+    },
+    {
+      "no": 3143,
+      "tier": "LEGENDARY",
+      "Background": "Coral",
+      "Body": "Glitch",
+      "Eyes": "Joy",
+      "Headwear": "None",
+      "Eyewear": "None",
+      "Clothing": "Blazer",
+      "Accessory": "None"
+    },
+    {
+      "no": 3801,
+      "tier": "RARE",
+      "Background": "Coral",
+      "Body": "Fog",
+      "Eyes": "Wide",
+      "Headwear": "Cap",
+      "Eyewear": "Monocle",
+      "Clothing": "Puffer",
+      "Accessory": "Scarf"
+    },
+    {
+      "no": 3841,
+      "tier": "RARE",
+      "Background": "Sage",
+      "Body": "Graphite",
+      "Eyes": "Glance",
+      "Headwear": "None",
+      "Eyewear": "VR Goggles",
+      "Clothing": "Hoodie",
+      "Accessory": "Scarf"
+    },
+    {
+      "no": 3900,
+      "tier": "RARE",
+      "Background": "Lilac",
+      "Body": "Mint",
+      "Eyes": "Focus",
+      "Headwear": "None",
+      "Eyewear": "VR Goggles",
+      "Clothing": "Bare",
+      "Accessory": "Scarf"
+    },
+    {
+      "no": 4251,
+      "tier": "RARE",
+      "Background": "Lilac",
+      "Body": "Graphite",
+      "Eyes": "Wink",
+      "Headwear": "Beanie",
+      "Eyewear": "VR Goggles",
+      "Clothing": "Turtleneck",
+      "Accessory": "Chain"
+    },
+    {
+      "no": 6063,
+      "tier": "LEGENDARY",
+      "Background": "Paper",
+      "Body": "Gold",
+      "Eyes": "Wink",
+      "Headwear": "Crown",
+      "Eyewear": "Shades",
+      "Clothing": "Tee",
+      "Accessory": "Scarf"
+    },
+    {
+      "no": 6508,
+      "tier": "UNCOMMON",
+      "Background": "Mint Wash",
+      "Body": "Graphite",
+      "Eyes": "Focus",
+      "Headwear": "None",
+      "Eyewear": "Visor",
+      "Clothing": "Bomber",
+      "Accessory": "Scarf"
+    },
+    {
+      "no": 7689,
+      "tier": "UNCOMMON",
+      "Background": "Coral",
+      "Body": "Cobalt",
+      "Eyes": "Joy",
+      "Headwear": "Bucket Hat",
+      "Eyewear": "Shades",
+      "Clothing": "Puffer",
+      "Accessory": "Lanyard"
+    },
+    {
+      "no": 7706,
+      "tier": "UNCOMMON",
+      "Background": "Mint Wash",
+      "Body": "Spearmint",
+      "Eyes": "Sleepy",
+      "Headwear": "Bucket Hat",
+      "Eyewear": "None",
+      "Clothing": "Puffer",
+      "Accessory": "Seed Pendant"
+    },
+    {
+      "no": 7768,
+      "tier": "COMMON",
+      "Background": "Mint Wash",
+      "Body": "Fog",
+      "Eyes": "Wink",
+      "Headwear": "Cap",
+      "Eyewear": "Visor",
+      "Clothing": "Hoodie",
+      "Accessory": "None"
+    },
+    {
+      "no": 7806,
+      "tier": "COMMON",
+      "Background": "Carbon",
+      "Body": "Spearmint",
+      "Eyes": "Sleepy",
+      "Headwear": "Bucket Hat",
+      "Eyewear": "Specs",
+      "Clothing": "Tee",
+      "Accessory": "None"
+    },
+    {
+      "no": 8865,
+      "tier": "UNCOMMON",
+      "Background": "Lilac",
+      "Body": "Lilac",
+      "Eyes": "Wide",
+      "Headwear": "Bucket Hat",
+      "Eyewear": "Specs",
+      "Clothing": "Blazer",
+      "Accessory": "Chain"
+    },
+    {
+      "no": 8918,
+      "tier": "UNCOMMON",
+      "Background": "Sky",
+      "Body": "Sky",
+      "Eyes": "Wink",
+      "Headwear": "Beanie",
+      "Eyewear": "Specs",
+      "Clothing": "Blazer",
+      "Accessory": "Seed Pendant"
+    },
+    {
+      "no": 9007,
+      "tier": "UNCOMMON",
+      "Background": "Sky",
+      "Body": "Spearmint",
+      "Eyes": "Idle",
+      "Headwear": "Beanie",
+      "Eyewear": "Shades",
+      "Clothing": "Puffer",
+      "Accessory": "Scarf"
+    },
+    {
+      "no": 9026,
+      "tier": "UNCOMMON",
+      "Background": "Paper",
+      "Body": "Mint",
+      "Eyes": "Focus",
+      "Headwear": "Headband",
+      "Eyewear": "Visor",
+      "Clothing": "Hoodie",
+      "Accessory": "Chain"
+    },
+    {
+      "no": 9518,
+      "tier": "UNCOMMON",
+      "Background": "Carbon",
+      "Body": "Mint",
+      "Eyes": "Joy",
+      "Headwear": "Bucket Hat",
+      "Eyewear": "Shades",
+      "Clothing": "Bomber",
+      "Accessory": "Seed Pendant"
+    },
+    {
+      "no": 9711,
+      "tier": "COMMON",
+      "Background": "Sky",
+      "Body": "Fog",
+      "Eyes": "Wide",
+      "Headwear": "None",
+      "Eyewear": "Visor",
+      "Clothing": "Turtleneck",
+      "Accessory": "None"
+    },
+    {
+      "no": 9896,
+      "tier": "1/1",
+      "_1of1": "Blueprint"
+    },
+    {
+      "no": 9924,
+      "tier": "1/1",
+      "_1of1": "Full Bloom"
+    }
+  ]
+}

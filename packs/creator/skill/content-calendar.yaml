@@ -1,0 +1,12 @@
+id: content-calendar
+layer: skill
+label: Content calendar
+weight: 4
+description: When the owner plans upcoming posts and wants a dated content calendar.
+skillDescription: When the owner plans upcoming posts and wants a dated content calendar.
+partials:
+  body: Build the next {{domain.label}} content calendar for {{name}}. Give each item a date, a
+    purpose and a status. Leave scheduling changes for the owner to confirm.
+needs:
+  connectors:
+    - social-scheduler

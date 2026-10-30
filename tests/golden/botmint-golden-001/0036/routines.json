@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat, leading with a table.",
+    "name": "hourly-work-hours-content-creator",
+    "prompt": "Draft the next Creator Economy posts in the owner's voice and update the content plan. Mark anything that needs a fact check before the owner posts it.\n\nBring in Competitor watch, Inbox triage and Notion notes where they fit.",
+    "schedule": "13 9-17 * * 1-5",
+    "trigger": null
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "deliveryLine": "Send me the result as a one-page memo in this chat.",
+    "name": "event-driven-ops-coordinator",
+    "prompt": "Collect the Crypto status since the last run. Name blockers, owners and what slipped, and draft the update for the owner to share.\n\nBring in Competitor watch, Content calendar and Standup summary where they fit.",
+    "schedule": null,
+    "trigger": {
+      "event": "new_message",
+      "source": "slack"
+    }
+  }
+]

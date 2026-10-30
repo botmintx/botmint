@@ -1,0 +1,9 @@
+id: lead-research
+layer: skill
+label: Lead research
+weight: 6
+description: When the owner names a company or person to research as a sales lead.
+skillDescription: When the owner names a company or person to research as a sales lead.
+partials:
+  body: Research the {{domain.label}} lead {{name}} was given. Say what they do, why they might fit,
+    and what is still unknown. Do not invent a contact detail.

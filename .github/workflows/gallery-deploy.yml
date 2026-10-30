@@ -1,0 +1,12 @@
+name: gallery-deploy
+
+# enable after Genesis launch (roadmap v1.0)
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "gallery deploy is disabled"

@@ -1,0 +1,12 @@
+id: vaporwave
+layer: avatar
+label: Vaporwave
+weight: 7
+description: "Portrait treatment: sunset grid."
+palette:
+  - "#FF71CE"
+  - "#01CDFE"
+  - "#05FFA1"
+  - "#B967FF"
+motif: sunset grid
+promptStyle: vaporwave style

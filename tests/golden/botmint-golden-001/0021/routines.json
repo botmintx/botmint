@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat in three sentences or fewer.",
+    "name": "hourly-work-hours-researcher",
+    "prompt": "Survey new SaaS material since the last run. Summarise what is new, what is still uncertain, and which sources the owner should read.\n\nBring in Daily digest, Market brief and Pull request review where they fit.",
+    "schedule": "13 9-17 * * 1-5",
+    "trigger": null
+  }
+]

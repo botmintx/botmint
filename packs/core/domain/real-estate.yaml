@@ -1,0 +1,12 @@
+id: real-estate
+layer: domain
+label: Real Estate
+weight: 7
+description: A Real Estate bot keeps its work specific to that field.
+adjectives:
+  - Keystone
+  - Brick
+  - Lintel
+  - Gable
+partials:
+  context: The work is in Real Estate, so the property, party and date should stay explicit.

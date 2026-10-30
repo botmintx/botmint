@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "properties": {
+    "claimsRoot": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "collection": {
+      "type": "string"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "properties": {
+        "available": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "claimed": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "held": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "reserved": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "claimed",
+        "reserved",
+        "held",
+        "available"
+      ],
+      "type": "object"
+    },
+    "lastExportAt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lastSeq": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "matchingMode": {
+      "enum": [
+        "note",
+        "reply"
+      ],
+      "type": "string"
+    },
+    "open": {
+      "type": "boolean"
+    },
+    "payee": {
+      "type": "string"
+    },
+    "perHandleCap": {
+      "exclusiveMinimum": 0,
+      "type": "integer"
+    },
+    "priceUsd": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "collection",
+    "open",
+    "priceUsd",
+    "payee",
+    "perHandleCap",
+    "matchingMode",
+    "lastExportAt",
+    "lastSeq",
+    "claimsRoot",
+    "counts"
+  ],
+  "type": "object"
+}

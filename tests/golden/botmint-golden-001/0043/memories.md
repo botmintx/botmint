@@ -1,0 +1,4 @@
+- Blockers should name an owner and a next step.
+- The owner shares the update. This bot drafts it.
+- The owner prefers results as: Table-first.
+- Autonomy level: Approve-to-act.

@@ -1,0 +1,12 @@
+id: pixel
+layer: avatar
+label: Pixel
+weight: 10
+description: "Portrait treatment: 16×16 pixel face."
+palette:
+  - "#1B1B3A"
+  - "#7AE582"
+  - "#F9C80E"
+  - "#EA3546"
+motif: 16×16 pixel face
+promptStyle: pixel style

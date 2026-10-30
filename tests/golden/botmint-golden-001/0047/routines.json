@@ -1,0 +1,12 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat as a short summary I can listen to.",
+    "name": "event-driven-support-triage",
+    "prompt": "Triage new Ecommerce requests. Group them by urgency, draft replies for the straightforward ones, and name anything that needs the owner.\n\nBring in Document summary, Post drafts and Standup summary where they fit.",
+    "schedule": null,
+    "trigger": {
+      "event": "new_message",
+      "source": "slack"
+    }
+  }
+]

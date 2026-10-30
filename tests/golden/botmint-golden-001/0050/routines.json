@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a Page and share the link in this chat.",
+    "name": "morning-brief-recruiter",
+    "prompt": "Screen new Fintech applicants against the role. Summarise fit, gaps and a suggested next step, and draft any outreach for the owner to review.\n\nBring in Document summary, Issue triage and Risk check where they fit.",
+    "schedule": "3 8 * * 1-5",
+    "trigger": null
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat, leading with a table.",
+    "name": "event-driven-dev-assistant",
+    "prompt": "Summarise new Crypto reviews and issues. Lead with risk, then with what is ready for the owner, and do not merge or close anything.\n\nBring in Document summary, Meeting prep and Pull request review where they fit.",
+    "schedule": null,
+    "trigger": {
+      "event": "new_issue_or_pr",
+      "source": "github"
+    }
+  }
+]

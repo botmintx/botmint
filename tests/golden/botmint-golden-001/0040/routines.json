@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat in three sentences or fewer.",
+    "name": "monday-review-researcher",
+    "prompt": "Survey new Ecommerce material since the last run. Summarise what is new, what is still uncertain, and which sources the owner should read.\n\nBring in Community pulse, Competitor watch and Sprint report where they fit.",
+    "schedule": "7 9 * * 1",
+    "trigger": null
+  }
+]

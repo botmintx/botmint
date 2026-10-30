@@ -1,0 +1,6 @@
+id: event-driven
+layer: cadence
+label: Event-driven
+weight: 14
+description: Runs when a new event arrives from a connected source.
+trigger: true

@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a short bullet brief in this chat.",
+    "name": "premarket-weekday-ops-coordinator",
+    "prompt": "Collect the SaaS status since the last run. Name blockers, owners and what slipped, and draft the update for the owner to share.\n\nBring in Daily digest, Market brief and Standup summary where they fit.",
+    "schedule": "47 7 * * 1-5",
+    "trigger": null
+  }
+]

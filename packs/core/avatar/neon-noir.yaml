@@ -1,0 +1,11 @@
+id: neon-noir
+layer: avatar
+label: Neon noir
+weight: 7
+description: "Portrait treatment: neon outline."
+palette:
+  - "#0D0221"
+  - "#FF2A6D"
+  - "#05D9E8"
+motif: neon outline
+promptStyle: neon noir style

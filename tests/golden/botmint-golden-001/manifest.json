@@ -1,0 +1,1658 @@
+{
+  "collection": "golden",
+  "count": 50,
+  "engineVersion": "1.0.0",
+  "seed": "botmint-golden-001",
+  "tokens": [
+    {
+      "dna": "20481a41626a71db",
+      "edition": 1,
+      "featuredUrl": null,
+      "name": "Counsel Lens - Legal Research Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 26,
+        "score": 32.4782,
+        "tier": "common"
+      },
+      "rawHash": "40ca9f726cf8845153ae7d3c31e0a4f28ac290280537d4e0165f43c125586dd1",
+      "slug": "counsel-lens-legal-research-lead",
+      "tokenId": "#0001",
+      "traits": {
+        "archetype": "researcher",
+        "autonomy": "read-only",
+        "avatar": "line-art",
+        "cadence": "end-of-day",
+        "connectors": [
+          "gmail",
+          "market-data"
+        ],
+        "domain": "legal",
+        "output": "page-report",
+        "persona": "skeptical-researcher",
+        "skills": [
+          "doc-summarizer",
+          "outreach-drafts",
+          "risk-check"
+        ]
+      }
+    },
+    {
+      "dna": "b6b5ee9e51590834",
+      "edition": 2,
+      "featuredUrl": null,
+      "name": "Brick Primer - Real Estate Inbox Manager",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 11,
+        "score": 34.555,
+        "tier": "uncommon"
+      },
+      "rawHash": "52d8b19251604a26bec6763907329b8e90c5b684c3a66a2aafac318477d1629a",
+      "slug": "brick-primer-real-estate-inbox-manager",
+      "tokenId": "#0002",
+      "traits": {
+        "archetype": "inbox-manager",
+        "autonomy": "bounded-autonomous",
+        "avatar": "holographic",
+        "cadence": "hourly-work-hours",
+        "connectors": [
+          "gmail",
+          "market-data"
+        ],
+        "domain": "real-estate",
+        "output": "table-first",
+        "persona": "friendly-teacher",
+        "skills": [
+          "inbox-triage",
+          "market-brief",
+          "risk-check"
+        ]
+      }
+    },
+    {
+      "dna": "cf0d4afcff8eacba",
+      "edition": 3,
+      "featuredUrl": null,
+      "name": "Vault Sentinel - Fintech Support Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 35,
+        "score": 31.2026,
+        "tier": "common"
+      },
+      "rawHash": "6e543028090358ebcbf051c1468e960c77fa0985d805df9c3997a1804fcb1b9e",
+      "slug": "vault-sentinel-fintech-support-lead",
+      "tokenId": "#0003",
+      "traits": {
+        "archetype": "support-triage",
+        "autonomy": "draft-only",
+        "avatar": "line-art",
+        "cadence": "event-driven",
+        "connectors": [
+          "notion",
+          "slack"
+        ],
+        "domain": "fintech",
+        "output": "page-report",
+        "persona": "stoic-quant",
+        "skills": [
+          "daily-digest",
+          "notion-sync",
+          "ticket-triage"
+        ]
+      }
+    },
+    {
+      "dna": "2ecc87e3abbe06da",
+      "edition": 4,
+      "featuredUrl": null,
+      "name": "Clearing Caliper - Fintech Sales Development Rep",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 24,
+        "score": 32.8871,
+        "tier": "common"
+      },
+      "rawHash": "5246d43f0e05ba02cdfb5fbec1b6c0f818e2267db9e1286f687e2f99da473ef1",
+      "slug": "clearing-caliper-fintech-sales-development-rep",
+      "tokenId": "#0004",
+      "traits": {
+        "archetype": "sales-sdr",
+        "autonomy": "read-only",
+        "avatar": "pixel",
+        "cadence": "twice-daily",
+        "connectors": [
+          "market-data",
+          "notion"
+        ],
+        "domain": "fintech",
+        "output": "memo",
+        "persona": "meticulous-auditor",
+        "skills": [
+          "lead-research",
+          "market-brief",
+          "notion-sync"
+        ]
+      }
+    },
+    {
+      "dna": "93c2fb2218aea3e1",
+      "edition": 5,
+      "featuredUrl": null,
+      "name": "Ticker Guide - Equities Research Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 14,
+        "score": 34.216,
+        "tier": "uncommon"
+      },
+      "rawHash": "78d2737298b7c7d61347a48929b4518f2b62b5ddda4cdf01e38d69f9ee546895",
+      "slug": "ticker-guide-equities-research-lead",
+      "tokenId": "#0005",
+      "traits": {
+        "archetype": "researcher",
+        "autonomy": "approve-to-act",
+        "avatar": "risograph",
+        "cadence": "end-of-day",
+        "connectors": [
+          "gmail",
+          "slack"
+        ],
+        "domain": "equities",
+        "output": "voice-note",
+        "persona": "friendly-teacher",
+        "skills": [
+          "lead-research",
+          "outreach-drafts",
+          "standup-summary"
+        ]
+      }
+    },
+    {
+      "dna": "1aacd30ed1947a77",
+      "edition": 6,
+      "featuredUrl": null,
+      "name": "Vault Sunbeam - Fintech Chief of Staff",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 22,
+        "score": 33.0283,
+        "tier": "common"
+      },
+      "rawHash": "6f34b9b835eeed08cffc0e09b24b4b649c3f78598874a00a8e6c8a1e67e46858",
+      "slug": "vault-sunbeam-fintech-chief-of-staff",
+      "tokenId": "#0006",
+      "traits": {
+        "archetype": "chief-of-staff",
+        "autonomy": "draft-only",
+        "avatar": "holographic",
+        "cadence": "friday-wrap",
+        "connectors": [
+          "linear",
+          "x"
+        ],
+        "domain": "fintech",
+        "output": "page-report",
+        "persona": "upbeat-coach",
+        "skills": [
+          "daily-digest",
+          "post-drafts",
+          "sprint-report"
+        ]
+      }
+    },
+    {
+      "dna": "b73389c50b6e2fbf",
+      "edition": 7,
+      "featuredUrl": null,
+      "name": "Headline Prism - Media Support Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 4,
+        "score": 36.5035,
+        "tier": "rare"
+      },
+      "rawHash": "c294c440caeea7d78163fbda6128ed7b6a2d663fb223edbd7c52ca696c596588",
+      "slug": "headline-prism-media-support-lead",
+      "tokenId": "#0007",
+      "traits": {
+        "archetype": "support-triage",
+        "autonomy": "draft-only",
+        "avatar": "claymation",
+        "cadence": "monday-review",
+        "connectors": [
+          "github",
+          "gmail"
+        ],
+        "domain": "media",
+        "output": "voice-note",
+        "persona": "skeptical-researcher",
+        "skills": [
+          "competitor-watch",
+          "inbox-triage",
+          "pr-review"
+        ]
+      }
+    },
+    {
+      "dna": "726d2cfa46232c8b",
+      "edition": 8,
+      "featuredUrl": null,
+      "name": "Block Relay - Crypto Content Producer",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 30,
+        "score": 31.9091,
+        "tier": "common"
+      },
+      "rawHash": "27fb2d23be73f13b66d1d77634b986155a4e83b580d78a85bbae239d470fcbb1",
+      "slug": "block-relay-crypto-content-producer",
+      "tokenId": "#0008",
+      "traits": {
+        "archetype": "content-creator",
+        "autonomy": "draft-only",
+        "avatar": "low-poly",
+        "cadence": "end-of-day",
+        "connectors": [
+          "github",
+          "linear"
+        ],
+        "domain": "crypto",
+        "output": "chat-short",
+        "persona": "terse-operator",
+        "skills": [
+          "competitor-watch",
+          "issue-triage",
+          "sprint-report"
+        ]
+      }
+    },
+    {
+      "dna": "411b42f57b3f87e7",
+      "edition": 9,
+      "featuredUrl": null,
+      "name": "Freight Quorum - Logistics Chief of Staff",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 42,
+        "score": 30.7209,
+        "tier": "common"
+      },
+      "rawHash": "7056d4975d987c1f018a0580ae0b5351da33097731d71081d2e2c182d5729468",
+      "slug": "freight-quorum-logistics-chief-of-staff",
+      "tokenId": "#0009",
+      "traits": {
+        "archetype": "chief-of-staff",
+        "autonomy": "read-only",
+        "avatar": "low-poly",
+        "cadence": "premarket-weekday",
+        "connectors": [
+          "calendar",
+          "x"
+        ],
+        "domain": "logistics",
+        "output": "chat-short",
+        "persona": "stoic-quant",
+        "skills": [
+          "daily-digest",
+          "meeting-prep",
+          "post-drafts"
+        ]
+      }
+    },
+    {
+      "dna": "41456e27205e6dee",
+      "edition": 10,
+      "featuredUrl": null,
+      "name": "Convoy Margin - Logistics Insights Analyst",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 32,
+        "score": 31.6973,
+        "tier": "common"
+      },
+      "rawHash": "321466b898e52dec7cace9d4fa9c9564e04a74da34dc2a578ae95088a94d39b1",
+      "slug": "convoy-margin-logistics-insights-analyst",
+      "tokenId": "#0010",
+      "traits": {
+        "archetype": "analyst",
+        "autonomy": "approve-to-act",
+        "avatar": "holographic",
+        "cadence": "morning-brief",
+        "connectors": [
+          "github",
+          "gmail"
+        ],
+        "domain": "logistics",
+        "output": "page-report",
+        "persona": "meticulous-auditor",
+        "skills": [
+          "inbox-triage",
+          "issue-triage",
+          "outreach-drafts"
+        ]
+      }
+    },
+    {
+      "dna": "48d935ebce97402f",
+      "edition": 11,
+      "featuredUrl": null,
+      "name": "Storefront Rally - Ecommerce Content Producer",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 38,
+        "score": 30.9922,
+        "tier": "common"
+      },
+      "rawHash": "4a479d0f7ad8a0168705cfa0a6965850aee95c69283c388348619a046ca32958",
+      "slug": "storefront-rally-ecommerce-content-producer",
+      "tokenId": "#0011",
+      "traits": {
+        "archetype": "content-creator",
+        "autonomy": "read-only",
+        "avatar": "line-art",
+        "cadence": "event-driven",
+        "connectors": [
+          "gmail",
+          "notion"
+        ],
+        "domain": "ecommerce",
+        "output": "page-report",
+        "persona": "upbeat-coach",
+        "skills": [
+          "candidate-screen",
+          "doc-summarizer",
+          "notion-sync"
+        ]
+      }
+    },
+    {
+      "dna": "ed9d2ee6b37c282b",
+      "edition": 12,
+      "featuredUrl": null,
+      "name": "Brick Owl - Real Estate Support Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 27,
+        "score": 32.3141,
+        "tier": "common"
+      },
+      "rawHash": "a6938fd0221e3338af12bf9a22d1a74b4ba2f4481650e2c8a24c5022835ebe06",
+      "slug": "brick-owl-real-estate-support-lead",
+      "tokenId": "#0012",
+      "traits": {
+        "archetype": "support-triage",
+        "autonomy": "draft-only",
+        "avatar": "holographic",
+        "cadence": "hourly-work-hours",
+        "connectors": [
+          "calendar",
+          "linear"
+        ],
+        "domain": "real-estate",
+        "output": "memo",
+        "persona": "dry-wit-analyst",
+        "skills": [
+          "doc-summarizer",
+          "meeting-prep",
+          "sprint-report"
+        ]
+      }
+    },
+    {
+      "dna": "efd5a856aa03117d",
+      "edition": 13,
+      "featuredUrl": null,
+      "name": "Remix Sentinel - Creator Economy Insights Analyst",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 34,
+        "score": 31.6181,
+        "tier": "common"
+      },
+      "rawHash": "b099ac357f9f4f6c276de0176a8168f9c38f76ba0c578701e421e010bd0e84d9",
+      "slug": "remix-sentinel-creator-economy-insights-analyst",
+      "tokenId": "#0013",
+      "traits": {
+        "archetype": "analyst",
+        "autonomy": "draft-only",
+        "avatar": "holographic",
+        "cadence": "premarket-weekday",
+        "connectors": [
+          "calendar",
+          "slack"
+        ],
+        "domain": "creator-economy",
+        "output": "bullet-brief",
+        "persona": "stoic-quant",
+        "skills": [
+          "daily-digest",
+          "meeting-prep",
+          "standup-summary"
+        ]
+      }
+    },
+    {
+      "dna": "bba62263b2040fe1",
+      "edition": 14,
+      "featuredUrl": null,
+      "name": "Onchain Summit - Crypto Operations Coordinator",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 12,
+        "score": 34.4501,
+        "tier": "uncommon"
+      },
+      "rawHash": "430db9496995535cbeff067c50f772ea27bca73ad5e0161b7419a05f28bdbd1c",
+      "slug": "onchain-summit-crypto-operations-coordinator",
+      "tokenId": "#0014",
+      "traits": {
+        "archetype": "ops-coordinator",
+        "autonomy": "read-only",
+        "avatar": "brutalist-glyph",
+        "cadence": "premarket-weekday",
+        "connectors": [
+          "github",
+          "linear"
+        ],
+        "domain": "crypto",
+        "output": "bullet-brief",
+        "persona": "bold-strategist",
+        "skills": [
+          "daily-digest",
+          "pr-review",
+          "sprint-report"
+        ]
+      }
+    },
+    {
+      "dna": "8a08517864d3a65b",
+      "edition": 15,
+      "featuredUrl": null,
+      "name": "Campus Probe - Education Support Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 31,
+        "score": 31.8414,
+        "tier": "common"
+      },
+      "rawHash": "a860b977139296582dd93132d8bbb13b5c4b45b35cd09ae31407875c03d471e3",
+      "slug": "campus-probe-education-support-lead",
+      "tokenId": "#0015",
+      "traits": {
+        "archetype": "support-triage",
+        "autonomy": "approve-to-act",
+        "avatar": "ascii",
+        "cadence": "morning-brief",
+        "connectors": [
+          "gmail",
+          "notion"
+        ],
+        "domain": "education",
+        "output": "memo",
+        "persona": "skeptical-researcher",
+        "skills": [
+          "competitor-watch",
+          "inbox-triage",
+          "notion-sync"
+        ]
+      }
+    },
+    {
+      "dna": "48285e8301ea7605",
+      "edition": 16,
+      "featuredUrl": null,
+      "name": "Stack Host - SaaS Operations Coordinator",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 33,
+        "score": 31.6587,
+        "tier": "common"
+      },
+      "rawHash": "2c4ac6d9333eedee65b603edb9163a0cdc3ed63c5d7b62160260cf3d47c1363c",
+      "slug": "stack-host-saas-operations-coordinator",
+      "tokenId": "#0016",
+      "traits": {
+        "archetype": "ops-coordinator",
+        "autonomy": "read-only",
+        "avatar": "risograph",
+        "cadence": "premarket-weekday",
+        "connectors": [
+          "market-data",
+          "slack"
+        ],
+        "domain": "saas",
+        "output": "bullet-brief",
+        "persona": "warm-concierge",
+        "skills": [
+          "daily-digest",
+          "market-brief",
+          "standup-summary"
+        ]
+      }
+    },
+    {
+      "dna": "0696690b03d96c8a",
+      "edition": 17,
+      "featuredUrl": null,
+      "name": "Crude Harbor - Commodities Research Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 2,
+        "score": 37.2221,
+        "tier": "epic"
+      },
+      "rawHash": "9754fb4eb2179c4e70a165e2e5d06bbc062d370cd7e20b37a7fa8ea263e9473a",
+      "slug": "crude-harbor-commodities-research-lead",
+      "tokenId": "#0017",
+      "traits": {
+        "archetype": "researcher",
+        "autonomy": "bounded-autonomous",
+        "avatar": "neon-noir",
+        "cadence": "event-driven",
+        "connectors": [
+          "gmail",
+          "slack"
+        ],
+        "domain": "commodities",
+        "output": "table-first",
+        "persona": "calm-diplomat",
+        "skills": [
+          "doc-summarizer",
+          "inbox-triage",
+          "ticket-triage"
+        ]
+      }
+    },
+    {
+      "dna": "836d1796609404be",
+      "edition": 18,
+      "featuredUrl": null,
+      "name": "Satoshi Cipher - Crypto Engineering Assistant",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 21,
+        "score": 33.0769,
+        "tier": "common"
+      },
+      "rawHash": "9cba69a41abb7a00d09a21c7891b7b939c8881f5ecb2bcfd2d5b4b66aa25b142",
+      "slug": "satoshi-cipher-crypto-engineering-assistant",
+      "tokenId": "#0018",
+      "traits": {
+        "archetype": "dev-assistant",
+        "autonomy": "approve-to-act",
+        "avatar": "ascii",
+        "cadence": "event-driven",
+        "connectors": [
+          "calendar",
+          "github"
+        ],
+        "domain": "crypto",
+        "output": "table-first",
+        "persona": "dry-wit-analyst",
+        "skills": [
+          "doc-summarizer",
+          "meeting-prep",
+          "pr-review"
+        ]
+      }
+    },
+    {
+      "dna": "fa3877136c06d911",
+      "edition": 19,
+      "featuredUrl": null,
+      "name": "Frame Steward - Media Chief of Staff",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 48,
+        "score": 29.1764,
+        "tier": "common"
+      },
+      "rawHash": "9e687d032a2f92b06d46bc2a1b4d2670b4e00ca7fa73b2d259679b3c0b15080a",
+      "slug": "frame-steward-media-chief-of-staff",
+      "tokenId": "#0019",
+      "traits": {
+        "archetype": "chief-of-staff",
+        "autonomy": "read-only",
+        "avatar": "pixel",
+        "cadence": "morning-brief",
+        "connectors": [
+          "calendar",
+          "notion"
+        ],
+        "domain": "media",
+        "output": "chat-short",
+        "persona": "warm-concierge",
+        "skills": [
+          "daily-digest",
+          "meeting-prep",
+          "notion-sync"
+        ]
+      }
+    },
+    {
+      "dna": "267f3c36d470be4d",
+      "edition": 20,
+      "featuredUrl": null,
+      "name": "Manifest Host - Logistics Insights Analyst",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 40,
+        "score": 30.951,
+        "tier": "common"
+      },
+      "rawHash": "9e283238e98658ed7e9672d09bdb5595e83e1473e855f7dc96323113f3491f3e",
+      "slug": "manifest-host-logistics-insights-analyst",
+      "tokenId": "#0020",
+      "traits": {
+        "archetype": "analyst",
+        "autonomy": "draft-only",
+        "avatar": "risograph",
+        "cadence": "twice-daily",
+        "connectors": [
+          "calendar",
+          "notion"
+        ],
+        "domain": "logistics",
+        "output": "voice-note",
+        "persona": "warm-concierge",
+        "skills": [
+          "competitor-watch",
+          "meeting-prep",
+          "notion-sync"
+        ]
+      }
+    },
+    {
+      "dna": "e302a865c31263ad",
+      "edition": 21,
+      "featuredUrl": null,
+      "name": "Cloud Sentinel - SaaS Research Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 36,
+        "score": 31.1321,
+        "tier": "common"
+      },
+      "rawHash": "2ad44ea2779cb1cbe9027b74c557350e3515cdc1f12a45fcf772826c2ad3f315",
+      "slug": "cloud-sentinel-saas-research-lead",
+      "tokenId": "#0021",
+      "traits": {
+        "archetype": "researcher",
+        "autonomy": "approve-to-act",
+        "avatar": "ascii",
+        "cadence": "hourly-work-hours",
+        "connectors": [
+          "github",
+          "market-data"
+        ],
+        "domain": "saas",
+        "output": "chat-short",
+        "persona": "stoic-quant",
+        "skills": [
+          "daily-digest",
+          "market-brief",
+          "pr-review"
+        ]
+      }
+    },
+    {
+      "dna": "190dfe550cd174bf",
+      "edition": 22,
+      "featuredUrl": null,
+      "name": "Broadcast Hearth - Media Sales Development Rep",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 9,
+        "score": 34.6714,
+        "tier": "uncommon"
+      },
+      "rawHash": "54258cf3381fc6b9fe3945e63c3bc4a79d65bc44a6170dca03b7332d5efcdab3",
+      "slug": "broadcast-hearth-media-sales-development-rep",
+      "tokenId": "#0022",
+      "traits": {
+        "archetype": "sales-sdr",
+        "autonomy": "draft-only",
+        "avatar": "low-poly",
+        "cadence": "twice-daily",
+        "connectors": [
+          "gmail",
+          "slack"
+        ],
+        "domain": "media",
+        "output": "bullet-brief",
+        "persona": "warm-concierge",
+        "skills": [
+          "lead-research",
+          "outreach-drafts",
+          "ticket-triage"
+        ]
+      }
+    },
+    {
+      "dna": "af40e1d45ac5c440",
+      "edition": 23,
+      "featuredUrl": null,
+      "name": "Block Probe - Crypto Inbox Manager",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 44,
+        "score": 30.6228,
+        "tier": "common"
+      },
+      "rawHash": "3609eec5ab5deae44a3c9456d877af58a591f6050a47352c3cde69407419c3fa",
+      "slug": "block-probe-crypto-inbox-manager",
+      "tokenId": "#0023",
+      "traits": {
+        "archetype": "inbox-manager",
+        "autonomy": "approve-to-act",
+        "avatar": "vaporwave",
+        "cadence": "twice-daily",
+        "connectors": [
+          "gmail",
+          "linear"
+        ],
+        "domain": "crypto",
+        "output": "chat-short",
+        "persona": "skeptical-researcher",
+        "skills": [
+          "candidate-screen",
+          "daily-digest",
+          "sprint-report"
+        ]
+      }
+    },
+    {
+      "dna": "4271b2801025910a",
+      "edition": 24,
+      "featuredUrl": null,
+      "name": "Dividend Bolt - Equities Community Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 6,
+        "score": 35.0808,
+        "tier": "rare"
+      },
+      "rawHash": "1469e5ec5b66436e2fb791514de35106026454bc02f3da34ea6bdb547d7bde25",
+      "slug": "dividend-bolt-equities-community-lead",
+      "tokenId": "#0024",
+      "traits": {
+        "archetype": "community-manager",
+        "autonomy": "read-only",
+        "avatar": "blueprint",
+        "cadence": "friday-wrap",
+        "connectors": [
+          "calendar",
+          "slack"
+        ],
+        "domain": "equities",
+        "output": "bullet-brief",
+        "persona": "terse-operator",
+        "skills": [
+          "daily-digest",
+          "meeting-prep",
+          "ticket-triage"
+        ]
+      }
+    },
+    {
+      "dna": "1a182652a7802633",
+      "edition": 25,
+      "featuredUrl": null,
+      "name": "Stack Piston - SaaS Inbox Manager",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 49,
+        "score": 29.1633,
+        "tier": "common"
+      },
+      "rawHash": "98fab567829d5847be75c514cc3c047837af8d581dc58794b0038ecbb97d0bd8",
+      "slug": "stack-piston-saas-inbox-manager",
+      "tokenId": "#0025",
+      "traits": {
+        "archetype": "inbox-manager",
+        "autonomy": "draft-only",
+        "avatar": "pixel",
+        "cadence": "twice-daily",
+        "connectors": [
+          "calendar",
+          "gmail"
+        ],
+        "domain": "saas",
+        "output": "table-first",
+        "persona": "terse-operator",
+        "skills": [
+          "daily-digest",
+          "inbox-triage",
+          "meeting-prep"
+        ]
+      }
+    },
+    {
+      "dna": "56fa4374581ae9ed",
+      "edition": 26,
+      "featuredUrl": null,
+      "name": "Dock Rally - Logistics Engineering Assistant",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 16,
+        "score": 33.8805,
+        "tier": "uncommon"
+      },
+      "rawHash": "bdffba1a02bd987c23a94c90dc03772de69748ce68aaad0f4bf62607f8f32d1e",
+      "slug": "dock-rally-logistics-engineering-assistant",
+      "tokenId": "#0026",
+      "traits": {
+        "archetype": "dev-assistant",
+        "autonomy": "approve-to-act",
+        "avatar": "blueprint",
+        "cadence": "morning-brief",
+        "connectors": [
+          "github",
+          "social-scheduler"
+        ],
+        "domain": "logistics",
+        "output": "chat-short",
+        "persona": "upbeat-coach",
+        "skills": [
+          "content-calendar",
+          "daily-digest",
+          "pr-review"
+        ]
+      }
+    },
+    {
+      "dna": "48e78da61cf80aa2",
+      "edition": 27,
+      "featuredUrl": null,
+      "name": "Atlas Host - Travel Inbox Manager",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 19,
+        "score": 33.5783,
+        "tier": "uncommon"
+      },
+      "rawHash": "1221bdbf6eecf8cc4b4641e95c8215568a4add03e8307cb59b6080f2e9c8c604",
+      "slug": "atlas-host-travel-inbox-manager",
+      "tokenId": "#0027",
+      "traits": {
+        "archetype": "inbox-manager",
+        "autonomy": "draft-only",
+        "avatar": "ascii",
+        "cadence": "twice-daily",
+        "connectors": [
+          "gmail",
+          "x"
+        ],
+        "domain": "travel",
+        "output": "bullet-brief",
+        "persona": "warm-concierge",
+        "skills": [
+          "candidate-screen",
+          "daily-digest",
+          "post-drafts"
+        ]
+      }
+    },
+    {
+      "dna": "f6a1666765b50e31",
+      "edition": 28,
+      "featuredUrl": null,
+      "name": "Pulse Tally - Healthcare Research Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 3,
+        "score": 37.2145,
+        "tier": "rare"
+      },
+      "rawHash": "93a523b58062d072a65654673357a53a778cbcd8c35730f8aba5ebef8b3fa689",
+      "slug": "pulse-tally-healthcare-research-lead",
+      "tokenId": "#0028",
+      "traits": {
+        "archetype": "researcher",
+        "autonomy": "draft-only",
+        "avatar": "isometric",
+        "cadence": "hourly-work-hours",
+        "connectors": [
+          "slack",
+          "social-scheduler"
+        ],
+        "domain": "healthcare",
+        "output": "bullet-brief",
+        "persona": "meticulous-auditor",
+        "skills": [
+          "competitor-watch",
+          "content-calendar",
+          "ticket-triage"
+        ]
+      }
+    },
+    {
+      "dna": "f6e62449f92abfc7",
+      "edition": 29,
+      "featuredUrl": null,
+      "name": "Cloud Rally - SaaS Chief of Staff",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 46,
+        "score": 30.1335,
+        "tier": "common"
+      },
+      "rawHash": "aea612b0afeab89a6e17d16026022962191f15e937d58ea4fd9adc5a3b7d7e4c",
+      "slug": "cloud-rally-saas-chief-of-staff",
+      "tokenId": "#0029",
+      "traits": {
+        "archetype": "chief-of-staff",
+        "autonomy": "approve-to-act",
+        "avatar": "pixel",
+        "cadence": "morning-brief",
+        "connectors": [
+          "market-data",
+          "x"
+        ],
+        "domain": "saas",
+        "output": "page-report",
+        "persona": "upbeat-coach",
+        "skills": [
+          "competitor-watch",
+          "post-drafts",
+          "risk-check"
+        ]
+      }
+    },
+    {
+      "dna": "12d4fbc17307bc11",
+      "edition": 30,
+      "featuredUrl": null,
+      "name": "Keystone Piston - Real Estate Insights Analyst",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 47,
+        "score": 30.1057,
+        "tier": "common"
+      },
+      "rawHash": "0b47023be6e39131121b990b5e3c8a814262d7452063e2647422858548263a26",
+      "slug": "keystone-piston-real-estate-insights-analyst",
+      "tokenId": "#0030",
+      "traits": {
+        "archetype": "analyst",
+        "autonomy": "draft-only",
+        "avatar": "pixel",
+        "cadence": "premarket-weekday",
+        "connectors": [
+          "market-data",
+          "notion"
+        ],
+        "domain": "real-estate",
+        "output": "chat-short",
+        "persona": "terse-operator",
+        "skills": [
+          "daily-digest",
+          "market-brief",
+          "notion-sync"
+        ]
+      }
+    },
+    {
+      "dna": "b7e8bedf9b2503a7",
+      "edition": 31,
+      "featuredUrl": null,
+      "name": "Satoshi Sunbeam - Crypto Trading Analyst",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 41,
+        "score": 30.7285,
+        "tier": "common"
+      },
+      "rawHash": "d4214e60eab5bab6f32bb378ca7bdb7e6ba829e8d282c14d40ade0726250a7bd",
+      "slug": "satoshi-sunbeam-crypto-trading-analyst",
+      "tokenId": "#0031",
+      "traits": {
+        "archetype": "trader",
+        "autonomy": "read-only",
+        "avatar": "line-art",
+        "cadence": "premarket-weekday",
+        "connectors": [
+          "calendar",
+          "market-data"
+        ],
+        "domain": "crypto",
+        "output": "memo",
+        "persona": "upbeat-coach",
+        "skills": [
+          "competitor-watch",
+          "meeting-prep",
+          "risk-check"
+        ]
+      }
+    },
+    {
+      "dna": "6cf33a059c48015b",
+      "edition": 32,
+      "featuredUrl": null,
+      "name": "Lecture Primer - Education Talent Partner",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 15,
+        "score": 34.0702,
+        "tier": "uncommon"
+      },
+      "rawHash": "34301a8495caddd44a6943a5be121f0489c763bbb1f5f8f0319cefc54c1cdfc9",
+      "slug": "lecture-primer-education-talent-partner",
+      "tokenId": "#0032",
+      "traits": {
+        "archetype": "recruiter",
+        "autonomy": "approve-to-act",
+        "avatar": "pixel",
+        "cadence": "end-of-day",
+        "connectors": [
+          "gmail",
+          "notion"
+        ],
+        "domain": "education",
+        "output": "table-first",
+        "persona": "friendly-teacher",
+        "skills": [
+          "doc-summarizer",
+          "notion-sync",
+          "outreach-drafts"
+        ]
+      }
+    },
+    {
+      "dna": "4ce064ca2f9268aa",
+      "edition": 33,
+      "featuredUrl": null,
+      "name": "Arcade Owl - Gaming Content Producer",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 7,
+        "score": 34.8174,
+        "tier": "rare"
+      },
+      "rawHash": "4ffe2eac5a9c8fdb0cd5fd97530b83d4e9e17457ecc30f6ff8804b9c39cce146",
+      "slug": "arcade-owl-gaming-content-producer",
+      "tokenId": "#0033",
+      "traits": {
+        "archetype": "content-creator",
+        "autonomy": "read-only",
+        "avatar": "vaporwave",
+        "cadence": "hourly-work-hours",
+        "connectors": [
+          "linear",
+          "x"
+        ],
+        "domain": "gaming",
+        "output": "page-report",
+        "persona": "dry-wit-analyst",
+        "skills": [
+          "competitor-watch",
+          "post-drafts",
+          "sprint-report"
+        ]
+      }
+    },
+    {
+      "dna": "66bf308003963bcf",
+      "edition": 34,
+      "featuredUrl": null,
+      "name": "Clause Steward - Legal Chief of Staff",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 25,
+        "score": 32.788,
+        "tier": "common"
+      },
+      "rawHash": "177449314b26c30cbf868a0ba9af492750458c55b67c3b7cb072fcb34ff7cb17",
+      "slug": "clause-steward-legal-chief-of-staff",
+      "tokenId": "#0034",
+      "traits": {
+        "archetype": "chief-of-staff",
+        "autonomy": "draft-only",
+        "avatar": "brutalist-glyph",
+        "cadence": "hourly-work-hours",
+        "connectors": [
+          "calendar",
+          "x"
+        ],
+        "domain": "legal",
+        "output": "memo",
+        "persona": "warm-concierge",
+        "skills": [
+          "daily-digest",
+          "meeting-prep",
+          "post-drafts"
+        ]
+      }
+    },
+    {
+      "dna": "e07967990ae63a9f",
+      "edition": 35,
+      "featuredUrl": null,
+      "name": "Cart Caliper - Ecommerce Content Producer",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 8,
+        "score": 34.6887,
+        "tier": "uncommon"
+      },
+      "rawHash": "769bcd766d071f1987eaf3c0f016f56471eb88163f9cd9f66e8e9aedbefcfb2a",
+      "slug": "cart-caliper-ecommerce-content-producer",
+      "tokenId": "#0035",
+      "traits": {
+        "archetype": "content-creator",
+        "autonomy": "approve-to-act",
+        "avatar": "isometric",
+        "cadence": "end-of-day",
+        "connectors": [
+          "market-data",
+          "x"
+        ],
+        "domain": "ecommerce",
+        "output": "memo",
+        "persona": "meticulous-auditor",
+        "skills": [
+          "community-pulse",
+          "competitor-watch",
+          "risk-check"
+        ]
+      }
+    },
+    {
+      "dna": "6264c193603d96bd",
+      "edition": 36,
+      "featuredUrl": null,
+      "name": "Remix Margin - Creator Economy Content Producer",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 28,
+        "score": 32.1919,
+        "tier": "common"
+      },
+      "rawHash": "fe36fccd15b54c055c86edb6fb8ee6af39a084cf8137ba8861a9a854c78e09b3",
+      "slug": "remix-margin-creator-economy-content-producer",
+      "tokenId": "#0036",
+      "traits": {
+        "archetype": "content-creator",
+        "autonomy": "read-only",
+        "avatar": "blueprint",
+        "cadence": "hourly-work-hours",
+        "connectors": [
+          "gmail",
+          "notion"
+        ],
+        "domain": "creator-economy",
+        "output": "table-first",
+        "persona": "meticulous-auditor",
+        "skills": [
+          "competitor-watch",
+          "inbox-triage",
+          "notion-sync"
+        ]
+      }
+    },
+    {
+      "dna": "7e3ac84897ea72cd",
+      "edition": 37,
+      "featuredUrl": null,
+      "name": "Hash Captain - Crypto Community Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 10,
+        "score": 34.6298,
+        "tier": "uncommon"
+      },
+      "rawHash": "ef23258d55bade457ae334e2bd08fa36bc1fc4570521944104b7e3c94e9fc4e0",
+      "slug": "hash-captain-crypto-community-lead",
+      "tokenId": "#0037",
+      "traits": {
+        "archetype": "community-manager",
+        "autonomy": "read-only",
+        "avatar": "line-art",
+        "cadence": "premarket-weekday",
+        "connectors": [
+          "gmail",
+          "social-scheduler"
+        ],
+        "domain": "crypto",
+        "output": "page-report",
+        "persona": "upbeat-coach",
+        "skills": [
+          "content-calendar",
+          "lead-research",
+          "outreach-drafts"
+        ]
+      }
+    },
+    {
+      "dna": "920a9312880ef1db",
+      "edition": 38,
+      "featuredUrl": null,
+      "name": "Bullion Harbor - Commodities Trading Analyst",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 5,
+        "score": 35.7065,
+        "tier": "rare"
+      },
+      "rawHash": "c1184bad054a3525691ccc699051d66013dac28c0ad96ae65b65e494dee9be3d",
+      "slug": "bullion-harbor-commodities-trading-analyst",
+      "tokenId": "#0038",
+      "traits": {
+        "archetype": "trader",
+        "autonomy": "approve-to-act",
+        "avatar": "neon-noir",
+        "cadence": "end-of-day",
+        "connectors": [
+          "market-data",
+          "notion"
+        ],
+        "domain": "commodities",
+        "output": "page-report",
+        "persona": "calm-diplomat",
+        "skills": [
+          "lead-research",
+          "market-brief",
+          "notion-sync"
+        ]
+      }
+    },
+    {
+      "dna": "cd09b37c0a82f1fd",
+      "edition": 39,
+      "featuredUrl": null,
+      "name": "Storefront Tally - Ecommerce Chief of Staff",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 50,
+        "score": 28.322,
+        "tier": "common"
+      },
+      "rawHash": "11afcd9811ced1bcb76e4ad3b16479c5acb175af125737f33092e7418b13629e",
+      "slug": "storefront-tally-ecommerce-chief-of-staff",
+      "tokenId": "#0039",
+      "traits": {
+        "archetype": "chief-of-staff",
+        "autonomy": "approve-to-act",
+        "avatar": "pixel",
+        "cadence": "twice-daily",
+        "connectors": [
+          "calendar",
+          "github"
+        ],
+        "domain": "ecommerce",
+        "output": "bullet-brief",
+        "persona": "meticulous-auditor",
+        "skills": [
+          "daily-digest",
+          "meeting-prep",
+          "pr-review"
+        ]
+      }
+    },
+    {
+      "dna": "6e56eec05683bdb4",
+      "edition": 40,
+      "featuredUrl": null,
+      "name": "Cart Cipher - Ecommerce Research Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 1,
+        "score": 37.7388,
+        "tier": "epic"
+      },
+      "rawHash": "881c9d06defe12da1b50b79be4f931cea7da6b3bb89ccfaf422c6e1dc50dba5e",
+      "slug": "cart-cipher-ecommerce-research-lead",
+      "tokenId": "#0040",
+      "traits": {
+        "archetype": "researcher",
+        "autonomy": "bounded-autonomous",
+        "avatar": "vaporwave",
+        "cadence": "monday-review",
+        "connectors": [
+          "linear",
+          "x"
+        ],
+        "domain": "ecommerce",
+        "output": "chat-short",
+        "persona": "dry-wit-analyst",
+        "skills": [
+          "community-pulse",
+          "competitor-watch",
+          "sprint-report"
+        ]
+      }
+    },
+    {
+      "dna": "9a2ad2c98e7e1f1e",
+      "edition": 41,
+      "featuredUrl": null,
+      "name": "Parcel Probe - Ecommerce Inbox Manager",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 45,
+        "score": 30.4855,
+        "tier": "common"
+      },
+      "rawHash": "a03b0f8c3b086db9af5aafce5a86604da7fdcb1e692b5754749b76b9faf79eb8",
+      "slug": "parcel-probe-ecommerce-inbox-manager",
+      "tokenId": "#0041",
+      "traits": {
+        "archetype": "inbox-manager",
+        "autonomy": "read-only",
+        "avatar": "holographic",
+        "cadence": "twice-daily",
+        "connectors": [
+          "github",
+          "gmail"
+        ],
+        "domain": "ecommerce",
+        "output": "bullet-brief",
+        "persona": "skeptical-researcher",
+        "skills": [
+          "candidate-screen",
+          "competitor-watch",
+          "issue-triage"
+        ]
+      }
+    },
+    {
+      "dna": "4d9b29ea5eea9f77",
+      "edition": 42,
+      "featuredUrl": null,
+      "name": "Ticker Envoy - Equities Trading Analyst",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 13,
+        "score": 34.2534,
+        "tier": "uncommon"
+      },
+      "rawHash": "b15f31a5102e63d5a25ae9896c213a17f7ea4232168e8f1edeaab6010bb46fb2",
+      "slug": "ticker-envoy-equities-trading-analyst",
+      "tokenId": "#0042",
+      "traits": {
+        "archetype": "trader",
+        "autonomy": "draft-only",
+        "avatar": "low-poly",
+        "cadence": "twice-daily",
+        "connectors": [
+          "linear",
+          "market-data"
+        ],
+        "domain": "equities",
+        "output": "chat-short",
+        "persona": "calm-diplomat",
+        "skills": [
+          "market-brief",
+          "risk-check",
+          "sprint-report"
+        ]
+      }
+    },
+    {
+      "dna": "50f819f099e1e93f",
+      "edition": 43,
+      "featuredUrl": null,
+      "name": "Blue-Chip Spark - Equities Operations Coordinator",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 29,
+        "score": 32.1335,
+        "tier": "common"
+      },
+      "rawHash": "30a937616c56bceb059657bb559fbeed8fac4e6b50be5ac95fc7375c6f053d28",
+      "slug": "blue-chip-spark-equities-operations-coordinator",
+      "tokenId": "#0043",
+      "traits": {
+        "archetype": "ops-coordinator",
+        "autonomy": "approve-to-act",
+        "avatar": "risograph",
+        "cadence": "morning-brief",
+        "connectors": [
+          "slack",
+          "x"
+        ],
+        "domain": "equities",
+        "output": "table-first",
+        "persona": "upbeat-coach",
+        "skills": [
+          "doc-summarizer",
+          "post-drafts",
+          "standup-summary"
+        ]
+      }
+    },
+    {
+      "dna": "c0357b72c14fbe9f",
+      "edition": 44,
+      "featuredUrl": null,
+      "name": "Bullion Switch - Commodities Operations Coordinator",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 20,
+        "score": 33.4605,
+        "tier": "uncommon"
+      },
+      "rawHash": "8576686eff2318888e3b257699462887cd89de9c2c397500ae56132174b41339",
+      "slug": "bullion-switch-commodities-operations-coordinator",
+      "tokenId": "#0044",
+      "traits": {
+        "archetype": "ops-coordinator",
+        "autonomy": "approve-to-act",
+        "avatar": "risograph",
+        "cadence": "twice-daily",
+        "connectors": [
+          "calendar",
+          "social-scheduler"
+        ],
+        "domain": "commodities",
+        "output": "voice-note",
+        "persona": "terse-operator",
+        "skills": [
+          "content-calendar",
+          "daily-digest",
+          "meeting-prep"
+        ]
+      }
+    },
+    {
+      "dna": "01ec99353359f7ad",
+      "edition": 45,
+      "featuredUrl": null,
+      "name": "Parcel Sentinel - Ecommerce Sales Development Rep",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 43,
+        "score": 30.6402,
+        "tier": "common"
+      },
+      "rawHash": "eea1d8ee12d98f65dcd58bbd20ce19ec8c43723ab48e9dc009b355c945af38a4",
+      "slug": "parcel-sentinel-ecommerce-sales-development-rep",
+      "tokenId": "#0045",
+      "traits": {
+        "archetype": "sales-sdr",
+        "autonomy": "approve-to-act",
+        "avatar": "line-art",
+        "cadence": "morning-brief",
+        "connectors": [
+          "github",
+          "slack"
+        ],
+        "domain": "ecommerce",
+        "output": "chat-short",
+        "persona": "stoic-quant",
+        "skills": [
+          "competitor-watch",
+          "issue-triage",
+          "standup-summary"
+        ]
+      }
+    },
+    {
+      "dna": "87814e7c7e69544f",
+      "edition": 46,
+      "featuredUrl": null,
+      "name": "Gable Wry - Real Estate Inbox Manager",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 39,
+        "score": 30.9736,
+        "tier": "common"
+      },
+      "rawHash": "072111cdf936d3beebaaaae6ea80309f0db5481f512fa37b611f1d7eac572275",
+      "slug": "gable-wry-real-estate-inbox-manager",
+      "tokenId": "#0046",
+      "traits": {
+        "archetype": "inbox-manager",
+        "autonomy": "read-only",
+        "avatar": "brutalist-glyph",
+        "cadence": "end-of-day",
+        "connectors": [
+          "github",
+          "gmail"
+        ],
+        "domain": "real-estate",
+        "output": "chat-short",
+        "persona": "dry-wit-analyst",
+        "skills": [
+          "daily-digest",
+          "inbox-triage",
+          "pr-review"
+        ]
+      }
+    },
+    {
+      "dna": "61da95d65015afa2",
+      "edition": 47,
+      "featuredUrl": null,
+      "name": "Parcel Envoy - Ecommerce Support Lead",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 17,
+        "score": 33.7185,
+        "tier": "uncommon"
+      },
+      "rawHash": "0312834902d44fd08fa8e83c6304332931c26dcce340e503f39e237fabc7d8ab",
+      "slug": "parcel-envoy-ecommerce-support-lead",
+      "tokenId": "#0047",
+      "traits": {
+        "archetype": "support-triage",
+        "autonomy": "approve-to-act",
+        "avatar": "blueprint",
+        "cadence": "event-driven",
+        "connectors": [
+          "slack",
+          "x"
+        ],
+        "domain": "ecommerce",
+        "output": "voice-note",
+        "persona": "calm-diplomat",
+        "skills": [
+          "doc-summarizer",
+          "post-drafts",
+          "standup-summary"
+        ]
+      }
+    },
+    {
+      "dna": "60294f51bb2d76eb",
+      "edition": 48,
+      "featuredUrl": null,
+      "name": "Lintel Guide - Real Estate Insights Analyst",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 37,
+        "score": 31.0871,
+        "tier": "common"
+      },
+      "rawHash": "647d45a3f2974f70ae55ee173341efccaf37c30e4953ba126256f13edc2f69e3",
+      "slug": "lintel-guide-real-estate-insights-analyst",
+      "tokenId": "#0048",
+      "traits": {
+        "archetype": "analyst",
+        "autonomy": "draft-only",
+        "avatar": "line-art",
+        "cadence": "morning-brief",
+        "connectors": [
+          "github",
+          "notion"
+        ],
+        "domain": "real-estate",
+        "output": "table-first",
+        "persona": "friendly-teacher",
+        "skills": [
+          "competitor-watch",
+          "issue-triage",
+          "notion-sync"
+        ]
+      }
+    },
+    {
+      "dna": "4269f3dfd1767861",
+      "edition": 49,
+      "featuredUrl": null,
+      "name": "Onchain Meridian - Crypto Operations Coordinator",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 18,
+        "score": 33.5892,
+        "tier": "uncommon"
+      },
+      "rawHash": "ed72bf755704881ec9ca39f03cb6958edce9315865c1f1e1f2933ba0560b2437",
+      "slug": "onchain-meridian-crypto-operations-coordinator",
+      "tokenId": "#0049",
+      "traits": {
+        "archetype": "ops-coordinator",
+        "autonomy": "approve-to-act",
+        "avatar": "vaporwave",
+        "cadence": "event-driven",
+        "connectors": [
+          "slack",
+          "social-scheduler"
+        ],
+        "domain": "crypto",
+        "output": "memo",
+        "persona": "stoic-quant",
+        "skills": [
+          "competitor-watch",
+          "content-calendar",
+          "standup-summary"
+        ]
+      }
+    },
+    {
+      "dna": "8d559ec5058ce366",
+      "edition": 50,
+      "featuredUrl": null,
+      "name": "Vault Lens - Fintech Talent Partner",
+      "polishedHash": null,
+      "rarity": {
+        "rank": 23,
+        "score": 32.8949,
+        "tier": "common"
+      },
+      "rawHash": "5f665971b264c336c320db2eb90ea221c75936c8267b1177b890fbc45bc428e1",
+      "slug": "vault-lens-fintech-talent-partner",
+      "tokenId": "#0050",
+      "traits": {
+        "archetype": "recruiter",
+        "autonomy": "read-only",
+        "avatar": "pixel",
+        "cadence": "morning-brief",
+        "connectors": [
+          "github",
+          "market-data"
+        ],
+        "domain": "fintech",
+        "output": "page-report",
+        "persona": "skeptical-researcher",
+        "skills": [
+          "doc-summarizer",
+          "issue-triage",
+          "risk-check"
+        ]
+      }
+    }
+  ]
+}

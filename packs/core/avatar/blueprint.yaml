@@ -1,0 +1,11 @@
+id: blueprint
+layer: avatar
+label: Blueprint
+weight: 9
+description: "Portrait treatment: technical drawing."
+palette:
+  - "#0B3D91"
+  - "#FFFFFF"
+  - "#7FB3FF"
+motif: technical drawing
+promptStyle: blueprint style

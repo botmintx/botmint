@@ -1,0 +1,6 @@
+id: premarket-weekday
+layer: cadence
+label: Pre-market weekday
+weight: 10
+description: Runs before the weekday open so the owner sees the overnight move.
+schedule: 47 7 * * 1-5

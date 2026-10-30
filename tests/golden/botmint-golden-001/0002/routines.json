@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat, leading with a table.",
+    "name": "hourly-work-hours-inbox-manager",
+    "prompt": "Sort what arrived for the owner in Real Estate. Group what needs a reply, what can wait, and what is noise. Prepare drafts and leave sending to the owner.\n\nBring in Inbox triage, Market brief and Risk check where they fit.",
+    "schedule": "13 9-17 * * 1-5",
+    "trigger": null
+  }
+]

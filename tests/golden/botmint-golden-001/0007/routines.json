@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat as a short summary I can listen to.",
+    "name": "monday-review-support-triage",
+    "prompt": "Triage new Media requests. Group them by urgency, draft replies for the straightforward ones, and name anything that needs the owner.\n\nBring in Competitor watch, Inbox triage and Pull request review where they fit.",
+    "schedule": "7 9 * * 1",
+    "trigger": null
+  }
+]

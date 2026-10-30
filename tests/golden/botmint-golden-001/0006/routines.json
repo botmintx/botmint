@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a Page and share the link in this chat.",
+    "name": "friday-wrap-chief-of-staff",
+    "prompt": "Prepare the owner's Fintech day. List decisions that need them, meetings worth a brief, and anything that slipped since the last run.\n\nBring in Daily digest, Post drafts and Sprint report where they fit.",
+    "schedule": "17 16 * * 5",
+    "trigger": null
+  }
+]

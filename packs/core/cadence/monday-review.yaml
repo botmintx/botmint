@@ -1,0 +1,6 @@
+id: monday-review
+layer: cadence
+label: Monday review
+weight: 12
+description: Runs on Monday morning so the owner can set the week.
+schedule: 7 9 * * 1

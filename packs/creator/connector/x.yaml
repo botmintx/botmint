@@ -1,0 +1,8 @@
+id: x
+layer: connector
+label: X
+weight: 10
+description: Connects the bot to X.
+marketplaceId: null
+aliases:
+  - X

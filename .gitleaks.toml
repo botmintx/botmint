@@ -1,0 +1,11 @@
+title = "botmint"
+
+[allowlist]
+description = "Committed hashes are provenance, not secrets."
+paths = [
+  '''tests/fixtures''',
+  '''tests/golden''',
+  '''collections''',
+  '''schema''',
+  '''pnpm-lock.yaml''',
+]

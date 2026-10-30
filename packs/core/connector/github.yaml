@@ -1,0 +1,11 @@
+id: github
+layer: connector
+label: GitHub
+weight: 10
+description: Connects the bot to GitHub.
+marketplaceId: null
+aliases:
+  - GitHub
+trigger:
+  source: github
+  event: new_issue_or_pr

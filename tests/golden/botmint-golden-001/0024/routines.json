@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a short bullet brief in this chat.",
+    "name": "friday-wrap-community-manager",
+    "prompt": "Report what the Equities community said since the last run. Draft replies for the threads that need the owner, and leave posting to them.\n\nBring in Daily digest, Meeting prep and Ticket triage where they fit.",
+    "schedule": "17 16 * * 5",
+    "trigger": null
+  }
+]

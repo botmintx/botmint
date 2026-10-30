@@ -1,0 +1,12 @@
+id: low-poly
+layer: avatar
+label: Low-poly
+weight: 8
+description: "Portrait treatment: faceted head."
+palette:
+  - "#355070"
+  - "#6D597A"
+  - "#B56576"
+  - "#EAAC8B"
+motif: faceted head
+promptStyle: low-poly style

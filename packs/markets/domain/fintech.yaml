@@ -1,0 +1,12 @@
+id: fintech
+layer: domain
+label: Fintech
+weight: 8
+description: A Fintech bot keeps its work specific to that field.
+adjectives:
+  - Ledger
+  - Vault
+  - Mint
+  - Clearing
+partials:
+  context: The work is in Fintech, so amounts, counterparties and timing should stay explicit.

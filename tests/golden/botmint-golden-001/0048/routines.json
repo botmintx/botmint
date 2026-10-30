@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat, leading with a table.",
+    "name": "morning-brief-analyst",
+    "prompt": "Review what changed in Real Estate since the last run. Lead with the few developments that matter, name the source of each point, and flag anything uncertain.\n\nBring in Competitor watch, Issue triage and Notion notes where they fit.",
+    "schedule": "3 8 * * 1-5",
+    "trigger": null
+  }
+]

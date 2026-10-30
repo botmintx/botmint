@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat as a short summary I can listen to.",
+    "name": "twice-daily-analyst",
+    "prompt": "Review what changed in Logistics since the last run. Lead with the few developments that matter, name the source of each point, and flag anything uncertain.\n\nBring in Competitor watch, Meeting prep and Notion notes where they fit.",
+    "schedule": "11 9,15 * * 1-5",
+    "trigger": null
+  }
+]

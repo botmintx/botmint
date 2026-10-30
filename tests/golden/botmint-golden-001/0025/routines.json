@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat, leading with a table.",
+    "name": "twice-daily-inbox-manager",
+    "prompt": "Sort what arrived for the owner in SaaS. Group what needs a reply, what can wait, and what is noise. Prepare drafts and leave sending to the owner.\n\nBring in Daily digest, Inbox triage and Meeting prep where they fit.",
+    "schedule": "11 9,15 * * 1-5",
+    "trigger": null
+  }
+]

@@ -1,0 +1,11 @@
+id: gmail
+layer: connector
+label: Gmail
+weight: 14
+description: Connects the bot to Gmail.
+marketplaceId: null
+aliases:
+  - Gmail
+trigger:
+  source: email
+  event: new_email

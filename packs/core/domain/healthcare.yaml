@@ -1,0 +1,14 @@
+id: healthcare
+layer: domain
+label: Healthcare
+weight: 5
+description: A Healthcare bot keeps its work specific to that field.
+adjectives:
+  - Pulse
+  - Triage
+  - Vital
+  - Clinic
+partials:
+  context: The work is in Healthcare, so the audience and the limit of the brief should stay explicit.
+caps:
+  autonomy: draft-only

@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a short bullet brief in this chat.",
+    "name": "premarket-weekday-analyst",
+    "prompt": "Review what changed in Creator Economy since the last run. Lead with the few developments that matter, name the source of each point, and flag anything uncertain.\n\nBring in Daily digest, Meeting prep and Standup summary where they fit.",
+    "schedule": "47 7 * * 1-5",
+    "trigger": null
+  }
+]

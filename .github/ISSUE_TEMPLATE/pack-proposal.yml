@@ -1,0 +1,24 @@
+name: Pack proposal
+description: Propose a community trait pack.
+title: "pack: "
+labels: []
+body:
+  - type: textarea
+    id: job
+    attributes:
+      label: What job does the pack serve?
+    validations:
+      required: true
+  - type: textarea
+    id: connectors
+    attributes:
+      label: Which connectors does it need?
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Confirm
+      options:
+        - label: Rules will be data only. No copied third-party Grok Bot templates, secrets, or personal data.
+          required: true

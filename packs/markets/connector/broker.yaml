@@ -1,0 +1,13 @@
+id: broker
+layer: connector
+label: Broker
+weight: 4
+description: Connects the bot to Broker.
+marketplaceId: null
+aliases:
+  - Broker
+allowedOn:
+  archetype:
+    - trader
+caps:
+  autonomy: approve-to-act

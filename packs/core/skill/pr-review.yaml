@@ -1,0 +1,12 @@
+id: pr-review
+layer: skill
+label: Pull request review
+weight: 4
+description: When the owner wants open pull requests summarised and reviewed for risk.
+skillDescription: When the owner wants open pull requests summarised and reviewed for risk.
+partials:
+  body: Summarise open {{domain.label}} reviews for {{name}}. Lead with risk, then with what looks
+    ready, and leave any comment or merge for the owner to approve.
+needs:
+  connectors:
+    - github

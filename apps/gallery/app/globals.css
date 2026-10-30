@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --color-mint: #3cf0a0;
+  --color-ink: #067a50;
+  --color-void: #000000;
+  --color-carbon: #0a0c0b;
+  --color-line: #23282a;
+  --color-fog: #e7e9ea;
+  --color-muted: #71767b;
+  --color-paper: #ffffff;
+}
+
+body {
+  background: #000;
+  color: #e7e9ea;
+  font-family: "Geist", ui-sans-serif, system-ui, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+article svg,
+.aspect-square svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}

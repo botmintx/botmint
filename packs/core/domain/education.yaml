@@ -1,0 +1,12 @@
+id: education
+layer: domain
+label: Education
+weight: 6
+description: A Education bot keeps its work specific to that field.
+adjectives:
+  - Syllabus
+  - Campus
+  - Lecture
+  - Scholar
+partials:
+  context: The work is in Education, so the learner, subject and next step should stay explicit.

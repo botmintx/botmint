@@ -1,0 +1,12 @@
+id: claymation
+layer: avatar
+label: Claymation
+weight: 7
+description: "Portrait treatment: soft clay figure."
+palette:
+  - "#F4A261"
+  - "#E76F51"
+  - "#2A9D8F"
+  - "#264653"
+motif: soft clay figure
+promptStyle: claymation style

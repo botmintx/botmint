@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a short bullet brief in this chat.",
+    "name": "twice-daily-sales-sdr",
+    "prompt": "Research the next Media leads and draft personal outreach for the owner to approve. Say why each lead fits, and do not invent details you could not check.\n\nBring in Lead research, Outreach drafts and Ticket triage where they fit.",
+    "schedule": "11 9,15 * * 1-5",
+    "trigger": null
+  }
+]

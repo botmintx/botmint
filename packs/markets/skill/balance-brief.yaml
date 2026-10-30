@@ -1,0 +1,12 @@
+id: balance-brief
+layer: skill
+label: Balance brief
+weight: 2
+description: When the owner asks about their X Money balance or recent activity; read-only.
+skillDescription: When the owner asks about their X Money balance or recent activity; read-only.
+partials:
+  body: Read the {{domain.label}} balance and recent activity for {{name}}. Report the figures you can
+    see. Do not send, request or move money in this skill.
+needs:
+  connectors:
+    - x-money

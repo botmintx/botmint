@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a short bullet brief in this chat.",
+    "name": "twice-daily-chief-of-staff",
+    "prompt": "Prepare the owner's Ecommerce day. List decisions that need them, meetings worth a brief, and anything that slipped since the last run.\n\nBring in Daily digest, Meeting prep and Pull request review where they fit.",
+    "schedule": "11 9,15 * * 1-5",
+    "trigger": null
+  }
+]

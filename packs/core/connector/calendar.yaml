@@ -1,0 +1,8 @@
+id: calendar
+layer: connector
+label: Google Calendar
+weight: 12
+description: Connects the bot to Google Calendar.
+marketplaceId: null
+aliases:
+  - Google Calendar

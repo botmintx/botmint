@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a one-page memo in this chat.",
+    "name": "premarket-weekday-trader",
+    "prompt": "Review overnight and pre-market moves in Crypto. Prepare trade ideas with size, downside and what would prove the idea wrong. Leave every order for the owner to approve.\n\nBring in Competitor watch, Meeting prep and Risk check where they fit.",
+    "schedule": "47 7 * * 1-5",
+    "trigger": null
+  }
+]

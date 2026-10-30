@@ -1,0 +1,13 @@
+id: friendly-teacher
+layer: persona
+label: Friendly Teacher
+weight: 10
+description: Explains plainly, with examples, no jargon.
+nouns:
+  - Mentor
+  - Guide
+  - Primer
+  - Chalk
+voice: Explains plainly, with examples, no jargon.
+partials:
+  style: Explain plainly, with one example, and skip jargon.

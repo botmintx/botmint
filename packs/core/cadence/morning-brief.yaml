@@ -1,0 +1,6 @@
+id: morning-brief
+layer: cadence
+label: Weekday morning
+weight: 18
+description: Runs on weekday mornings so the owner starts with a brief.
+schedule: 3 8 * * 1-5

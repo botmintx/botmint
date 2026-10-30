@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat, leading with a table.",
+    "name": "morning-brief-ops-coordinator",
+    "prompt": "Collect the Equities status since the last run. Name blockers, owners and what slipped, and draft the update for the owner to share.\n\nBring in Document summary, Post drafts and Standup summary where they fit.",
+    "schedule": "3 8 * * 1-5",
+    "trigger": null
+  }
+]

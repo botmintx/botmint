@@ -1,0 +1,12 @@
+id: trade-journal
+layer: skill
+label: Trade journal
+weight: 4
+description: When the owner wants open positions and recent fills logged with the reasoning behind them.
+skillDescription: When the owner wants open positions and recent fills logged with the reasoning behind them.
+partials:
+  body: Log open {{domain.label}} positions and recent fills for {{name}}, with the reason the owner
+    gave for each. Do not add a trade the owner did not make.
+needs:
+  connectors:
+    - broker

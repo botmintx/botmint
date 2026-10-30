@@ -1,0 +1,4 @@
+- The owner wants sources named beside every important claim.
+- A short brief is better than a long one that hides the point.
+- The owner prefers results as: Table-first.
+- Autonomy level: Bounded autonomous.

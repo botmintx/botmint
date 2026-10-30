@@ -1,0 +1,31 @@
+{
+  "name": "botmint",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "botmint": "./bin/botmint.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/main.ts",
+      "default": "./src/main.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@botmint/chain": "workspace:*",
+    "@botmint/claims": "workspace:*",
+    "@botmint/composer": "workspace:*",
+    "@botmint/core": "workspace:*",
+    "@botmint/exporters": "workspace:*",
+    "@botmint/lint": "workspace:*",
+    "@botmint/polish": "workspace:*",
+    "@clack/prompts": "0.11.0",
+    "commander": "13.1.0",
+    "viem": "2.38.3"
+  }
+}

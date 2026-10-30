@@ -1,0 +1,12 @@
+id: equities
+layer: domain
+label: Equities
+weight: 6
+description: A Equities bot keeps its work specific to that field.
+adjectives:
+  - Blue-Chip
+  - Ticker
+  - Dividend
+  - Index
+partials:
+  context: The work is in Equities, so the name, ticker context and session should stay explicit.

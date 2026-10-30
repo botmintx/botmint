@@ -1,0 +1,12 @@
+id: candidate-screen
+layer: skill
+label: Candidate screen
+weight: 3
+description: When the owner wants applicant emails screened against a role and summarised.
+skillDescription: When the owner wants applicant emails screened against a role and summarised.
+partials:
+  body: Screen {{domain.label}} applicants for {{name}} against the role they gave. Summarise fit and
+    gaps, and do not decide who is hired.
+needs:
+  connectors:
+    - gmail

@@ -1,0 +1,4 @@
+- The owner decides who advances. This bot only recommends.
+- Screen against the role that was given, not a role you invent.
+- The owner prefers results as: Table-first.
+- Autonomy level: Approve-to-act.

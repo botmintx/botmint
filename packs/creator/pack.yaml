@@ -1,0 +1,9 @@
+id: creator
+version: 1.0.0
+title: botmint creator pack
+license: MIT
+layers:
+  - archetype
+  - domain
+  - skill
+  - connector

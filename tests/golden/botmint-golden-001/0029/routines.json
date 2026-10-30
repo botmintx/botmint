@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a Page and share the link in this chat.",
+    "name": "morning-brief-chief-of-staff",
+    "prompt": "Prepare the owner's SaaS day. List decisions that need them, meetings worth a brief, and anything that slipped since the last run.\n\nBring in Competitor watch, Post drafts and Risk check where they fit.",
+    "schedule": "3 8 * * 1-5",
+    "trigger": null
+  }
+]

@@ -1,0 +1,15 @@
+id: approve-to-act
+layer: autonomy
+label: Approve-to-act
+weight: 30
+rank: 2
+description: Approve-to-act is rank 2 in the autonomy ladder.
+partials:
+  policy: Before any send, post, purchase, payment, schedule change, money movement or deletion, you
+    show your owner exactly what you will do and wait for their explicit approval of that one
+    action.
+asksBefore:
+  - each send
+  - each post
+  - each payment
+  - each deletion

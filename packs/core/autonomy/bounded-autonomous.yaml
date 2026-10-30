@@ -1,0 +1,14 @@
+id: bounded-autonomous
+layer: autonomy
+label: Bounded autonomous
+weight: 10
+rank: 3
+description: Bounded autonomous is rank 3 in the autonomy ladder.
+partials:
+  policy: You may act on routine, reversible tasks within the limits your owner set. You always ask
+    first before anything that spends money, moves money, deletes data or messages someone new.
+asksBefore:
+  - spending money
+  - moving money
+  - deleting data
+  - messaging someone new

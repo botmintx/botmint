@@ -1,0 +1,9 @@
+id: doc-summarizer
+layer: skill
+label: Document summary
+weight: 6
+description: When the owner shares a long document and wants a faithful summary with key points.
+skillDescription: When the owner shares a long document and wants a faithful summary with key points.
+partials:
+  body: Summarise the {{domain.label}} document {{name}} shared. Keep the key points faithful to the
+    text and list anything you had to leave out.

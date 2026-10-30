@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a Page and share the link in this chat.",
+    "name": "hourly-work-hours-content-creator",
+    "prompt": "Draft the next Gaming posts in the owner's voice and update the content plan. Mark anything that needs a fact check before the owner posts it.\n\nBring in Competitor watch, Post drafts and Sprint report where they fit.",
+    "schedule": "13 9-17 * * 1-5",
+    "trigger": null
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "claimsRoot": null,
+  "collection": "genesis",
+  "counts": {
+    "available": 10000,
+    "claimed": 0,
+    "held": 0,
+    "reserved": 0
+  },
+  "lastExportAt": null,
+  "lastSeq": 0,
+  "matchingMode": "note",
+  "open": false,
+  "payee": "@brandononchain",
+  "perHandleCap": 5,
+  "priceUsd": "10.00"
+}

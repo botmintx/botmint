@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat, leading with a table.",
+    "name": "end-of-day-recruiter",
+    "prompt": "Screen new Education applicants against the role. Summarise fit, gaps and a suggested next step, and draft any outreach for the owner to review.\n\nBring in Document summary, Notion notes and Outreach drafts where they fit.",
+    "schedule": "33 17 * * 1-5",
+    "trigger": null
+  }
+]

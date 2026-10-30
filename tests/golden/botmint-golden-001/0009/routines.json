@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result in this chat in three sentences or fewer.",
+    "name": "premarket-weekday-chief-of-staff",
+    "prompt": "Prepare the owner's Logistics day. List decisions that need them, meetings worth a brief, and anything that slipped since the last run.\n\nBring in Daily digest, Meeting prep and Post drafts where they fit.",
+    "schedule": "47 7 * * 1-5",
+    "trigger": null
+  }
+]

@@ -1,0 +1,8 @@
+id: linear
+layer: connector
+label: Linear
+weight: 8
+description: Connects the bot to Linear.
+marketplaceId: null
+aliases:
+  - Linear

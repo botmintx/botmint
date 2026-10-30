@@ -1,0 +1,40 @@
+name: Genesis waitlist
+description: X Money is US-only. Join the waitlist for a later way to pay $10.
+title: "waitlist: "
+labels: []
+body:
+  - type: input
+    id: handle
+    attributes:
+      label: X handle
+      placeholder: "@name"
+    validations:
+      required: true
+  - type: input
+    id: numbers
+    attributes:
+      label: Preferred numbers
+      description: Up to three, such as #0001, #0042, or random.
+    validations:
+      required: true
+  - type: input
+    id: country
+    attributes:
+      label: Country
+    validations:
+      required: true
+  - type: dropdown
+    id: payment
+    attributes:
+      label: Preferred payment later
+      options:
+        - USDC on Base
+        - Card
+        - Not sure
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        Claims are closed. This form does not reserve a number and does not take payment.
+        botmint is an unofficial community project, not affiliated with xAI or X.

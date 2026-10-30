@@ -1,0 +1,676 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "anyOf": [
+    {
+      "additionalProperties": false,
+      "properties": {
+        "affinity": {
+          "additionalProperties": false,
+          "properties": {
+            "cadences": {
+              "items": {
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "domains": {
+              "additionalProperties": {
+                "enum": [
+                  "good",
+                  "poor"
+                ],
+                "type": "string"
+              },
+              "propertyNames": {
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "type": "object"
+            },
+            "skills": {
+              "additionalProperties": {
+                "enum": [
+                  1.5,
+                  2
+                ],
+                "type": "number"
+              },
+              "propertyNames": {
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "type": "object"
+            }
+          },
+          "type": "object"
+        },
+        "caps": {
+          "additionalProperties": false,
+          "properties": {
+            "autonomy": {
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "description": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        "label": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "layer": {
+          "const": "archetype",
+          "type": "string"
+        },
+        "partials": {
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "job": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "memories": {
+              "items": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "maxItems": 3,
+              "minItems": 1,
+              "type": "array"
+            },
+            "routinePrompt": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "description",
+            "job",
+            "routinePrompt",
+            "memories"
+          ],
+          "type": "object"
+        },
+        "requires": {
+          "additionalProperties": false,
+          "properties": {
+            "connectors": {
+              "items": {
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "domain": {
+              "items": {
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        },
+        "title": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "weight": {
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "layer",
+        "label",
+        "title",
+        "weight",
+        "description",
+        "partials"
+      ],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "adjectives": {
+          "items": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "minLength": 1,
+              "type": "string"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "caps": {
+          "additionalProperties": false,
+          "properties": {
+            "autonomy": {
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "description": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        "label": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "layer": {
+          "const": "domain",
+          "type": "string"
+        },
+        "partials": {
+          "additionalProperties": false,
+          "properties": {
+            "context": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "context"
+          ],
+          "type": "object"
+        },
+        "weight": {
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "layer",
+        "label",
+        "weight",
+        "description",
+        "adjectives",
+        "partials"
+      ],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        "label": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "layer": {
+          "const": "persona",
+          "type": "string"
+        },
+        "nouns": {
+          "items": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "minLength": 1,
+              "type": "string"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "partials": {
+          "additionalProperties": false,
+          "properties": {
+            "style": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "style"
+          ],
+          "type": "object"
+        },
+        "voice": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "weight": {
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "layer",
+        "label",
+        "weight",
+        "description",
+        "nouns",
+        "voice",
+        "partials"
+      ],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        "label": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "layer": {
+          "const": "skill",
+          "type": "string"
+        },
+        "needs": {
+          "additionalProperties": false,
+          "properties": {
+            "connectors": {
+              "items": {
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                "type": "string"
+              },
+              "maxItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "connectors"
+          ],
+          "type": "object"
+        },
+        "partials": {
+          "additionalProperties": false,
+          "properties": {
+            "body": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "body"
+          ],
+          "type": "object"
+        },
+        "skillDescription": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "weight": {
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "layer",
+        "label",
+        "weight",
+        "description",
+        "skillDescription",
+        "partials"
+      ],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        "label": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "layer": {
+          "const": "cadence",
+          "type": "string"
+        },
+        "schedule": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "trigger": {
+          "const": true,
+          "type": "boolean"
+        },
+        "weight": {
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "layer",
+        "label",
+        "weight",
+        "description"
+      ],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "aliases": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "allowedOn": {
+          "additionalProperties": false,
+          "properties": {
+            "archetype": {
+              "items": {
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        },
+        "caps": {
+          "additionalProperties": false,
+          "properties": {
+            "autonomy": {
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "description": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        "label": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "layer": {
+          "const": "connector",
+          "type": "string"
+        },
+        "marketplaceId": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "payment": {
+          "const": true,
+          "type": "boolean"
+        },
+        "trigger": {
+          "additionalProperties": false,
+          "properties": {
+            "event": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "source": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "source",
+            "event"
+          ],
+          "type": "object"
+        },
+        "weight": {
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "layer",
+        "label",
+        "weight",
+        "description",
+        "marketplaceId",
+        "aliases"
+      ],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "asksBefore": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "description": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        "label": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "layer": {
+          "const": "autonomy",
+          "type": "string"
+        },
+        "partials": {
+          "additionalProperties": false,
+          "properties": {
+            "policy": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "policy"
+          ],
+          "type": "object"
+        },
+        "rank": {
+          "maximum": 3,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "weight": {
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "layer",
+        "label",
+        "weight",
+        "description",
+        "rank",
+        "partials",
+        "asksBefore"
+      ],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "deliveryLine": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "description": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        "label": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "layer": {
+          "const": "output",
+          "type": "string"
+        },
+        "partials": {
+          "additionalProperties": false,
+          "properties": {
+            "format": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "format"
+          ],
+          "type": "object"
+        },
+        "weight": {
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "layer",
+        "label",
+        "weight",
+        "description",
+        "deliveryLine",
+        "partials"
+      ],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        "label": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "layer": {
+          "const": "avatar",
+          "type": "string"
+        },
+        "motif": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "palette": {
+          "items": {
+            "pattern": "^#[0-9A-Fa-f]{6}$",
+            "type": "string"
+          },
+          "maxItems": 5,
+          "minItems": 2,
+          "type": "array"
+        },
+        "promptStyle": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "weight": {
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "layer",
+        "label",
+        "weight",
+        "description",
+        "palette",
+        "motif",
+        "promptStyle"
+      ],
+      "type": "object"
+    }
+  ]
+}

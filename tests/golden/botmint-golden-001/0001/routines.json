@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a Page and share the link in this chat.",
+    "name": "end-of-day-researcher",
+    "prompt": "Survey new Legal material since the last run. Summarise what is new, what is still uncertain, and which sources the owner should read.\n\nBring in Document summary, Outreach drafts and Risk check where they fit.",
+    "schedule": "33 17 * * 1-5",
+    "trigger": null
+  }
+]

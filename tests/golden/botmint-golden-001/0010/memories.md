@@ -1,0 +1,4 @@
+- The owner wants the insight first and the supporting detail after it.
+- Uncertain claims should be marked as uncertain rather than smoothed over.
+- The owner prefers results as: Page report.
+- Autonomy level: Approve-to-act.

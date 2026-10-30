@@ -1,0 +1,15 @@
+id: payment-request
+layer: skill
+label: Payment request
+weight: 3
+description: When the owner wants to request or send money on X Money; always asks for approval of
+  each payment first.
+skillDescription: When the owner wants to request or send money on X Money; always asks for approval
+  of each payment first.
+partials:
+  body: Prepare one {{domain.label}} payment or request for {{name}} only after they name who, how
+    much and what for. Show that exact action and wait for approval of that one action. Never retry
+    a refusal.
+needs:
+  connectors:
+    - x-money

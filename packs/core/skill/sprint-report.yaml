@@ -1,0 +1,12 @@
+id: sprint-report
+layer: skill
+label: Sprint report
+weight: 4
+description: When the owner wants sprint progress, blockers and slipped issues from Linear.
+skillDescription: When the owner wants sprint progress, blockers and slipped issues from Linear.
+partials:
+  body: Report {{domain.label}} sprint progress for {{name}}. Include what finished, what slipped, and
+    the blockers, using the tracker the owner connected.
+needs:
+  connectors:
+    - linear

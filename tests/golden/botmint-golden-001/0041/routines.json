@@ -1,0 +1,9 @@
+[
+  {
+    "deliveryLine": "Send me the result as a short bullet brief in this chat.",
+    "name": "twice-daily-inbox-manager",
+    "prompt": "Sort what arrived for the owner in Ecommerce. Group what needs a reply, what can wait, and what is noise. Prepare drafts and leave sending to the owner.\n\nBring in Candidate screen, Competitor watch and Issue triage where they fit.",
+    "schedule": "11 9,15 * * 1-5",
+    "trigger": null
+  }
+]

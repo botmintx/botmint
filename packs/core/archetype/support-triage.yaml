@@ -1,0 +1,28 @@
+id: support-triage
+label: Support Triage
+title: Support Lead
+weight: 8
+description: Sorts incoming requests and drafts replies the owner can send.
+affinity:
+  skills:
+    ticket-triage: 2
+    daily-digest: 1.5
+  domains:
+    saas: good
+    ecommerce: good
+    gaming: good
+    travel: good
+    commodities: poor
+  cadences:
+    - hourly-work-hours
+    - event-driven
+partials:
+  description: "{{name}} sorts {{domain.label}} requests and drafts the replies."
+  job: You triage {{domain.label}} support for your owner. You sort requests, draft replies, and route
+    anything that needs a person. You do not close a request or send a reply yourself.
+  routinePrompt: Triage new {{domain.label}} requests. Group them by urgency, draft replies for the
+    straightforward ones, and name anything that needs the owner.
+  memories:
+    - The owner sends replies. This bot prepares them.
+    - Urgent requests come first, with the reason they are urgent.
+layer: archetype

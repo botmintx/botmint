@@ -1,0 +1,12 @@
+id: crypto
+layer: domain
+label: Crypto
+weight: 8
+description: A Crypto bot keeps its work specific to that field.
+adjectives:
+  - Onchain
+  - Satoshi
+  - Hash
+  - Block
+partials:
+  context: The work is in Crypto, so chain, asset and timing should stay explicit.

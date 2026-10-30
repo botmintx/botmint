@@ -1,0 +1,122 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm exec biome ci .
+      - run: pnpm test
+      - name: determinism fixture
+        shell: bash
+        run: |
+          node --experimental-strip-types -e "
+          import { readFileSync } from 'node:fs';
+          import { buildCollectionInMemory } from '@botmint/exporters';
+          const expected = JSON.parse(readFileSync('tests/fixtures/determinism-200.json','utf8'));
+          const built = buildCollectionInMemory({ root: process.cwd(), collection: 'determinism', seed: 'botmint-determinism-001', count: 200 });
+          const actual = built.tokens.map((token) => token.rawHash);
+          if (JSON.stringify(actual) !== JSON.stringify(expected)) {
+            console.error('determinism mismatch');
+            process.exit(1);
+          }
+          "
+      - run: pnpm schema
+      - run: git diff --exit-code schema/
+      - run: pnpm exec botmint validate
+      - name: count
+        shell: bash
+        run: |
+          pnpm exec botmint count --json > /tmp/count.json
+          node --experimental-strip-types -e "
+          import { readFileSync } from 'node:fs';
+          import { EXPECTED_COUNT } from '@botmint/core';
+          const actual = JSON.parse(readFileSync('/tmp/count.json','utf8'));
+          if (JSON.stringify(actual) !== JSON.stringify(EXPECTED_COUNT)) {
+            console.error(actual);
+            process.exit(1);
+          }
+          "
+      - run: pnpm sample
+      - run: git diff --exit-code collections/dev-sample/
+      - name: claims verify when present
+        shell: bash
+        run: |
+          if [ -f collections/genesis/claims/claims.jsonl ]; then
+            pnpm exec botmint claims verify genesis
+          fi
+      - name: drop verify when locked
+        shell: bash
+        run: |
+          if [ -f collections/genesis/genesis.lock.json ]; then
+            pnpm exec botmint drop verify genesis
+          fi
+      - run: pnpm --filter @botmint/gallery build
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITLEAKS_LICENSE: ""
+      - name: XAI_API_KEY is unset
+        shell: bash
+        run: |
+          if [ -n "${XAI_API_KEY:-}" ]; then
+            echo "XAI_API_KEY must not be set"
+            exit 1
+          fi
+
+  count-comment:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - id: head
+        run: echo "count=$(pnpm exec botmint count --json)" >> "$GITHUB_OUTPUT"
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const count = `${{ steps.head.outputs.count }}`;
+            const body = [
+              "botmint count",
+              "",
+              "```json",
+              count,
+              "```",
+              "",
+              "Base is the initial commit and has no engine yet, so there is no previous count to diff.",
+            ].join("\n");
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
