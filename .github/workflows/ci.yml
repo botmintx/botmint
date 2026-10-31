@@ -47,15 +47,20 @@ jobs:
       - name: count
         shell: bash
         run: |
-          pnpm exec botmint count --json > /tmp/count.json
-          node --experimental-strip-types -e "
-          import { readFileSync } from 'node:fs';
+          # Compare on stdin. Git Bash maps /tmp to its own temp directory, but
+          # Windows Node treats /tmp/count.json as D:\tmp\count.json.
+          pnpm exec botmint count --json | node --experimental-strip-types -e "
           import { EXPECTED_COUNT } from '@botmint/core';
-          const actual = JSON.parse(readFileSync('/tmp/count.json','utf8'));
-          if (JSON.stringify(actual) !== JSON.stringify(EXPECTED_COUNT)) {
-            console.error(actual);
-            process.exit(1);
-          }
+          let raw = '';
+          process.stdin.setEncoding('utf8');
+          process.stdin.on('data', (chunk) => { raw += chunk; });
+          process.stdin.on('end', () => {
+            const actual = JSON.parse(raw);
+            if (JSON.stringify(actual) !== JSON.stringify(EXPECTED_COUNT)) {
+              console.error(actual);
+              process.exit(1);
+            }
+          });
           "
       - run: pnpm sample
       - run: git diff --exit-code collections/dev-sample/
@@ -72,9 +77,62 @@ jobs:
             pnpm exec botmint drop verify genesis
           fi
       - run: pnpm --filter @botmint/gallery build
-      - uses: gitleaks/gitleaks-action@v2
-        env:
-          GITLEAKS_LICENSE: ""
+      # gitleaks/gitleaks-action@v2 refuses organization repos unless
+      # GITLEAKS_LICENSE is set. Spec §17 requires this scan with no license
+      # and no secrets, so CI runs the OSS gitleaks binary instead.
+      - name: gitleaks
+        shell: bash
+        run: |
+          set -euo pipefail
+          version=8.30.1
+          # RUNNER_TEMP is a Windows path (D:\a\_temp) under Git Bash. Forward
+          # slashes keep curl, python, and node on the same directory.
+          temp="${RUNNER_TEMP//\\//}"
+          os="$(uname -s)"
+          arch="$(uname -m)"
+          case "$os" in
+            Linux) platform=linux ;;
+            Darwin) platform=darwin ;;
+            MINGW*|MSYS*|CYGWIN*) platform=windows ;;
+            *) echo "unsupported os $os"; exit 1 ;;
+          esac
+          case "$arch" in
+            x86_64|amd64) cpu=x64 ;;
+            aarch64|arm64) cpu=arm64 ;;
+            *) echo "unsupported arch $arch"; exit 1 ;;
+          esac
+          if [ "$platform" = windows ]; then
+            asset="gitleaks_${version}_windows_${cpu}.zip"
+          else
+            asset="gitleaks_${version}_${platform}_${cpu}.tar.gz"
+          fi
+          url="https://github.com/gitleaks/gitleaks/releases/download/v${version}/${asset}"
+          curl -fsSL -o "${temp}/${asset}" "$url"
+          curl -fsSL -o "${temp}/gitleaks-checksums.txt" \
+            "https://github.com/gitleaks/gitleaks/releases/download/v${version}/gitleaks_${version}_checksums.txt"
+          node --input-type=module -e '
+            import { createHash } from "node:crypto";
+            import { readFileSync } from "node:fs";
+            import path from "node:path";
+            const asset = process.argv[1];
+            const dir = process.argv[2];
+            const sums = readFileSync(path.join(dir, "gitleaks-checksums.txt"), "utf8");
+            const line = sums.split(/\n/).find((entry) => entry.endsWith(asset));
+            if (!line) { console.error(`missing checksum for ${asset}`); process.exit(1); }
+            const expected = line.split(/\s+/)[0];
+            const actual = createHash("sha256").update(readFileSync(path.join(dir, asset))).digest("hex");
+            if (actual !== expected) { console.error("checksum mismatch"); process.exit(1); }
+          ' "$asset" "$temp"
+          mkdir -p "${temp}/gitleaks"
+          if [ "$platform" = windows ]; then
+            python -c 'import zipfile,sys; zipfile.ZipFile(sys.argv[1]).extractall(sys.argv[2])' \
+              "${temp}/${asset}" "${temp}/gitleaks"
+          else
+            tar -xzf "${temp}/${asset}" -C "${temp}/gitleaks"
+          fi
+          bin="${temp}/gitleaks/gitleaks"
+          if [ -f "${bin}.exe" ]; then bin="${bin}.exe"; fi
+          "$bin" detect --source . --config .gitleaks.toml --redact --verbose
       - name: XAI_API_KEY is unset
         shell: bash
         run: |
