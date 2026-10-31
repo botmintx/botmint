@@ -1,0 +1,41 @@
+[
+  {
+    "type": "constructor",
+    "inputs": [{ "name": "admin_", "type": "address" }],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "mint",
+    "stateMutability": "nonpayable",
+    "inputs": [{ "name": "to", "type": "address" }, { "name": "tokenId", "type": "uint256" }],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "ownerOf",
+    "stateMutability": "view",
+    "inputs": [{ "name": "tokenId", "type": "uint256" }],
+    "outputs": [{ "name": "", "type": "address" }]
+  },
+  {
+    "type": "function",
+    "name": "transferFrom",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      { "name": "from", "type": "address" },
+      { "name": "to", "type": "address" },
+      { "name": "tokenId", "type": "uint256" }
+    ],
+    "outputs": []
+  },
+  {
+    "type": "event",
+    "name": "Transfer",
+    "inputs": [
+      { "name": "from", "type": "address", "indexed": true },
+      { "name": "to", "type": "address", "indexed": true },
+      { "name": "tokenId", "type": "uint256", "indexed": true }
+    ]
+  }
+]

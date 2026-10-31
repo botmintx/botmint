@@ -31,5 +31,26 @@ describe("gallery export", () => {
     const home = readFileSync(path.join(out, "index.html"), "utf8");
     expect(home).toContain("DNA");
     expect(home).toContain("#0001");
+    const mint = readFileSync(path.join(out, "mint/index.html"), "utf8");
+    expect(mint).toContain("Mint random · claims are closed");
+    expect(mint).not.toContain("Test mint is on");
+    const manifest = JSON.parse(readFileSync(path.join(out, "bots/0001/loader.json"), "utf8")) as {
+      tokenId: string;
+      manifestPath: string;
+      pfp: { path: string };
+      instructionsSource: string;
+    };
+    expect(manifest.tokenId).toBe("#0001");
+    expect(manifest.manifestPath).toBe("bots/0001/loader.json");
+    expect(manifest.pfp.path).toBe("/sample/0001/avatar.svg");
+    expect(manifest.instructionsSource).toBe("raw");
+    const domain = readFileSync(path.join(out, "mint/claim-domain.json"), "utf8");
+    expect(domain).toContain('"Botmint"');
+    const artifact = JSON.parse(
+      readFileSync(path.join(out, "mint/BotmintGenesis.json"), "utf8"),
+    ) as {
+      bytecode: string;
+    };
+    expect(artifact.bytecode.startsWith("0x")).toBe(true);
   }, 180_000);
 });

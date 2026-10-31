@@ -59,6 +59,9 @@ importers:
       '@botmint/exporters':
         specifier: workspace:*
         version: link:../../packages/exporters
+      '@botmint/loader':
+        specifier: workspace:*
+        version: link:../../packages/loader
       next:
         specifier: 15.5.4
         version: 15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -68,6 +71,9 @@ importers:
       react-dom:
         specifier: 19.1.1
         version: 19.1.1(react@19.1.1)
+      viem:
+        specifier: 2.38.3
+        version: 2.38.3(typescript@5.9.3)(zod@3.25.76)
     devDependencies:
       '@tailwindcss/postcss':
         specifier: 4.1.16
@@ -132,6 +138,12 @@ importers:
       '@botmint/lint':
         specifier: workspace:*
         version: link:../lint
+      '@botmint/loader':
+        specifier: workspace:*
+        version: link:../loader
+      '@botmint/mint':
+        specifier: workspace:*
+        version: link:../mint
       '@botmint/polish':
         specifier: workspace:*
         version: link:../polish
@@ -183,6 +195,18 @@ importers:
       '@botmint/core':
         specifier: workspace:*
         version: link:../core
+
+  packages/loader:
+    dependencies:
+      '@botmint/mint':
+        specifier: workspace:*
+        version: link:../mint
+
+  packages/mint:
+    dependencies:
+      viem:
+        specifier: 2.38.3
+        version: 2.38.3(typescript@5.9.3)(zod@3.25.76)
 
   packages/polish:
     dependencies:

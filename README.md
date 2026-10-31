@@ -146,9 +146,23 @@ Not frozen. `collections/genesis/` has a readme and `claims/claims.state.json` w
 | Anchor | Unsigned EAS builders. Not sent. See [docs/anchoring.md](docs/anchoring.md). |
 | Verify | `botmint verify --collection genesis` reports that Genesis is not frozen. |
 
+## How minting gives you a real Grok Bot
+
+Grok Bot has no public API to create a bot in someone else's account, and a share template is packed from a live bot and published by its owner. This repo does not generate 10,000 templates.
+
+There is one universal Botmint loader. `botmint loader pack` prints the recipe (profile, two skills, memory, and a daily ownership routine) so you can publish that one bot yourself. On first run it asks for a Genesis token ID and a claim code. It refuses to load unless the code is a valid EIP-712 signature from the current owner, still unexpired, unused, and matched by `ownerOf` on the ownership token. It then fetches `bots/<id>/loader.json` from the gallery export and takes that bot's name, description, portrait, skills, and memory. A routine rechecks the holder and goes dormant if the token moved. A previous owner's code dies on transfer.
+
+The test setup is off by default. It is a mock $10 checkout (no X Money call) and a minimal ERC-721 whose token id is the Genesis bot id. Foundry tests and a local anvil chain cover mint, claim, transfer, expiry, and replay. A Base Sepolia deploy script is in `contracts/script/`. Nothing in CI deploys it, sends a transaction, or reads a key. The EAS provenance attestation is unchanged and still unsigned. Genesis is not frozen, and `claims.state.json` stays `"open": false`.
+
+Rebuild the gallery with `NEXT_PUBLIC_BOTMINT_TEST_MINT=1` to click through that local flow. The default gallery leaves mint disabled.
+
+botmint is an unofficial community project, not affiliated with xAI or X. Official Grok Bot template status is up to xAI.
+
+Details: [docs/loader-and-test-mint.md](docs/loader-and-test-mint.md).
+
 ## Mint with X Money
 
-$10 per Genesis number, for eligible customers in the United States. A claim is a registry row, not an NFT. Installing a template is free.
+$10 per Genesis number, for eligible customers in the United States. A claim is a registry row, not an NFT. Installing a template is free. The ownership token above is a separate test setup. It is not a Genesis launch.
 
 The minter and Mint Desk skills are in [`integrations/x-money`](integrations/x-money/). They are text. This CLI has no X Money client and does not send, request, or read payments.
 
@@ -161,7 +175,8 @@ The minter and Mint Desk skills are in [`integrations/x-money`](integrations/x-m
 ## Repo
 
 ```text
-packages/core  composer  exporters  lint  polish  chain  claims  cli  avatars
+packages/core  composer  exporters  lint  polish  chain  claims  mint  loader  cli  avatars
+contracts/   BotmintGenesis ERC-721, Foundry tests, Base Sepolia script (not deployed)
 apps/gallery
 packs/core  packs/markets  packs/creator
 integrations/x-money

@@ -1,0 +1,13 @@
+{
+  "name": "Botmint",
+  "version": "1",
+  "primaryType": "Claim",
+  "types": {
+    "Claim": [
+      { "name": "tokenId", "type": "uint256" },
+      { "name": "owner", "type": "address" },
+      { "name": "nonce", "type": "bytes32" },
+      { "name": "expiry", "type": "uint256" }
+    ]
+  }
+}

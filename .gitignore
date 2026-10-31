@@ -11,7 +11,11 @@ __pycache__/
 README.brand.md
 apps/gallery/public/brand/
 apps/gallery/public/sample/
+apps/gallery/public/bots/
+apps/gallery/public/mint/
 apps/gallery/data/
+contracts/out/
+contracts/cache/
 # remove raw/polished lines at Genesis freeze (docs/genesis.md)
 collections/genesis/raw/
 collections/genesis/polished/

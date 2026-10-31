@@ -26,6 +26,12 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm typecheck
       - run: pnpm exec biome ci .
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: v1.8.7
+      - name: forge test
+        run: forge test --root contracts
       - run: pnpm test
       - name: determinism fixture
         shell: bash
