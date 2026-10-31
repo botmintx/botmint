@@ -20,6 +20,7 @@ describe("gallery export", () => {
       "stats/index.html",
       "provenance/index.html",
       "mint/index.html",
+      "claim/index.html",
       "dev-sample/0001/index.html",
       "dev-sample/0025/index.html",
     ];
@@ -34,6 +35,17 @@ describe("gallery export", () => {
     const mint = readFileSync(path.join(out, "mint/index.html"), "utf8");
     expect(mint).toContain("Mint random · claims are closed");
     expect(mint).not.toContain("Test mint is on");
+    const claim = readFileSync(path.join(out, "claim/index.html"), "utf8");
+    expect(claim).toContain("Claim codes are off");
+    expect(claim).not.toContain("Copy the claim code");
+    expect(claim).not.toContain("Test claim signing is on");
+    const deployment = JSON.parse(
+      readFileSync(path.join(out, "mint/base-sepolia.json"), "utf8"),
+    ) as { contract: string | null; galleryBaseUrl: string; rpcUrl: string; chainId: number };
+    expect(deployment.contract).toBeNull();
+    expect(deployment.chainId).toBe(84532);
+    expect(deployment.rpcUrl).toBe("https://sepolia.base.org");
+    expect(deployment.galleryBaseUrl).toBe("https://botmintx.github.io/botmint");
     const manifest = JSON.parse(readFileSync(path.join(out, "bots/0001/loader.json"), "utf8")) as {
       tokenId: string;
       manifestPath: string;

@@ -150,11 +150,11 @@ Not frozen. `collections/genesis/` has a readme and `claims/claims.state.json` w
 
 Grok Bot has no public API to create a bot in someone else's account, and a share template is packed from a live bot and published by its owner. This repo does not generate 10,000 templates.
 
-There is one universal Botmint loader. `botmint loader pack` prints the recipe (profile, two skills, memory, and a daily ownership routine) so you can publish that one bot yourself. On first run it asks for a Genesis token ID and a claim code. It refuses to load unless the code is a valid EIP-712 signature from the current owner, still unexpired, unused, and matched by `ownerOf` on the ownership token. It then fetches `bots/<id>/loader.json` from the gallery export and takes that bot's name, description, portrait, skills, and memory. A routine rechecks the holder and goes dormant if the token moved. A previous owner's code dies on transfer.
+There is one universal Botmint loader. `botmint loader pack` prints the recipe (profile, two skills, memory, and a daily ownership routine) so you can publish that one bot yourself. The skill text is filled from `deployments/base-sepolia.json` or `deployments/base.json` at pack time. The contract address is null until a Base Sepolia deploy writes it, and the pack refuses while that address or the gallery URL is null. On first run the bot asks for a Genesis token ID and a claim code, then runs `npx --yes botmint verify-claim`, `fetch-manifest`, and `check-owner`. A Grok Bot has no built-in EIP-712 check, so those commands do it: expiry, signature, and `ownerOf` on the public RPC. Used nonces stay in `~/.botmint/nonces.json` on the bot's machine. The daily routine runs `check-owner` and goes dormant if the token moved. A previous owner's code dies on transfer.
 
-The test setup is off by default. It is a mock $10 checkout (no X Money call) and a minimal ERC-721 whose token id is the Genesis bot id. Foundry tests and a local anvil chain cover mint, claim, transfer, expiry, and replay. A Base Sepolia deploy script is in `contracts/script/`. Nothing in CI deploys it, sends a transaction, or reads a key. The EAS provenance attestation is unchanged and still unsigned. Genesis is not frozen, and `claims.state.json` stays `"open": false`.
+The test setup is off by default. It is a mock $10 checkout (no X Money call) and a minimal ERC-721 whose token id is the Genesis bot id. Foundry tests and a local anvil chain cover mint, claim, the `verify-claim` command, transfer, and `check-owner`. A Base Sepolia Foundry script writes the address back into `deployments/base-sepolia.json`. Nothing in CI deploys it, sends a transaction, reads a key, or publishes the npm package. The EAS provenance attestation is unchanged and still unsigned. Genesis is not frozen, and `claims.state.json` stays `"open": false`.
 
-Rebuild the gallery with `NEXT_PUBLIC_BOTMINT_TEST_MINT=1` to click through that local flow. The default gallery leaves mint disabled.
+Rebuild the gallery with `NEXT_PUBLIC_BOTMINT_TEST_MINT=1` to click through the local mint flow and the claim-code signer. The default gallery leaves both disabled. GitHub Pages is a manual `workflow_dispatch` in `gallery-pages.yml` and is not dispatched from here.
 
 botmint is an unofficial community project, not affiliated with xAI or X. Official Grok Bot template status is up to xAI.
 
@@ -170,13 +170,14 @@ The minter and Mint Desk skills are in [`integrations/x-money`](integrations/x-m
 
 ## Gallery
 
-`apps/gallery` is a Next.js 15 static export. `GALLERY_COLLECTION` for this pass is the dev sample. Every page shows the dev-sample banner and the footer line. The mint controls render disabled. Build it with `pnpm --filter @botmint/gallery build`. The `out/` directory is local. Nothing is deployed. `gallery-deploy.yml` is `workflow_dispatch` with the job forced off.
+`apps/gallery` is a Next.js 15 static export. `GALLERY_COLLECTION` for this pass is the dev sample. Every page shows the dev-sample banner and the footer line. The mint and claim controls render disabled. Build it with `pnpm --filter @botmint/gallery build`. The `out/` directory is local. Nothing is deployed. `gallery-pages.yml` is `workflow_dispatch` only and does nothing until a person runs it. `gallery-deploy.yml` stays forced off.
 
 ## Repo
 
 ```text
 packages/core  composer  exporters  lint  polish  chain  claims  mint  loader  cli  avatars
 contracts/   BotmintGenesis ERC-721, Foundry tests, Base Sepolia script (not deployed)
+deployments/ base-sepolia.json and base.json (contract address null)
 apps/gallery
 packs/core  packs/markets  packs/creator
 integrations/x-money

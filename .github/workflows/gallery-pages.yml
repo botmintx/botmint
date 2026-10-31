@@ -1,0 +1,51 @@
+name: gallery-pages
+
+# Manual only. This workflow does nothing until a person dispatches it.
+# It is not run on push or pull request. Do not dispatch it from CI.
+on:
+  workflow_dispatch:
+    inputs:
+      test_claim:
+        description: Enable the injected-wallet claim signer
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: gallery-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: v1.8.7
+      - run: pnpm install --frozen-lockfile
+      - name: Build gallery
+        run: pnpm --filter @botmint/gallery build
+        env:
+          BOTMINT_PAGES: "1"
+          NEXT_PUBLIC_BOTMINT_TEST_MINT: ${{ inputs.test_claim == true && '1' || '0' }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/gallery/out
+      - id: deployment
+        uses: actions/deploy-pages@v4

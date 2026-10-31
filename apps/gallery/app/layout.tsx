@@ -7,20 +7,25 @@ export const metadata = {
   icons: { icon: "/brand/favicon.svg" },
 };
 
+function href(path: string): string {
+  return `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
+}
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className="min-h-screen bg-void text-fog">
         <header className="border-b border-line">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-            <a href="/" className="text-lg tracking-tight">
+            <a href={href("/")} className="text-lg tracking-tight">
               botmint
             </a>
             <nav className="flex gap-5 text-sm text-muted">
-              <a href="/">Gallery</a>
-              <a href="/stats/">Stats</a>
-              <a href="/provenance/">Provenance</a>
-              <a href="/mint/">Mint</a>
+              <a href={href("/")}>Gallery</a>
+              <a href={href("/stats/")}>Stats</a>
+              <a href={href("/provenance/")}>Provenance</a>
+              <a href={href("/mint/")}>Mint</a>
+              <a href={href("/claim/")}>Claim</a>
             </nav>
           </div>
         </header>

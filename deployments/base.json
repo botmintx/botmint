@@ -1,0 +1,7 @@
+{
+  "network": "base",
+  "chainId": 8453,
+  "contract": null,
+  "rpcUrl": "https://mainnet.base.org",
+  "galleryBaseUrl": "https://botmintx.github.io/botmint"
+}

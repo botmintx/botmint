@@ -6,9 +6,27 @@ Grok Bot cannot create a bot in another person's account through a public API, a
 
 ## Publish the loader
 
-`botmint loader pack` prints the recipe JSON: profile, the load skill, the getting-started skill, memory facts, and the ownership routine. Publish that text from your own bot. `--out <file>` also writes it.
+`deployments/base-sepolia.json` and `deployments/base.json` are the only place the chain id, contract address, public RPC, and gallery base URL live. The contract address is `null` until the Base Sepolia script in [base-sepolia-deploy.md](base-sepolia-deploy.md) writes one. The gallery URL is the GitHub Pages site. `botmint loader pack` reads that file and prints the recipe JSON: profile, the load skill, the getting-started skill, memory facts, and the ownership routine. Publish that text from your own bot. `--out <file>` also writes it. `--network` defaults to `base-sepolia`.
 
-The load skill speaks to the new owner. It asks for a Genesis token ID and a claim code. It refuses the load if verification fails. The routine tells the bot to read `ownerOf` again and go dormant if the token has moved.
+The pack refuses while the contract address or the gallery URL is null:
+
+```text
+botmint loader pack refused: contract address is null in deployments/base-sepolia.json. Fill it in after deploy, or pass --allow-unconfigured.
+```
+
+`--allow-unconfigured` still prints a recipe. The skill text says `null` for the missing field. There are no chain values hard-coded in the skill source. They are filled from the deployment file at pack time.
+
+The load skill speaks to the new owner. It asks for a Genesis token ID and a claim code. A Grok Bot cannot check an EIP-712 signature on its own, so the skill tells it to run these commands, one line each:
+
+```text
+npx --yes botmint@0.1.0 verify-claim --network base-sepolia --code '<claim code json>'
+npx --yes botmint@0.1.0 fetch-manifest <tokenId> --network base-sepolia
+npx --yes botmint@0.1.0 check-owner <tokenId> <owner address> --network base-sepolia
+```
+
+The version and the network come from the pack. `--network` defaults to `base-sepolia`, so the short form without it hits the same file. `verify-claim` prints JSON with `ok`, `reason`, and `manifestUrl`. It checks expiry, the signature, and `ownerOf` on the public RPC. It does not send a transaction.
+
+Used nonces are kept in a file the bot owns, `~/.botmint/nonces.json`, shaped `{ "nonces": [] }`. That list is local. A new machine does not know old nonces. After a transfer, `ownerOf` still rejects the previous owner. Pass `--nonce-file` to store the list somewhere else. The routine runs `check-owner` and tells the bot to go dormant if the token moved.
 
 ## What a buyer receives
 
@@ -32,16 +50,22 @@ The ownership flow test starts a local anvil, deploys the contract, mints after 
 
 ## Gallery flag
 
-The mint page stays closed unless you rebuild with:
+The mint page and the claim page stay closed unless you rebuild with:
 
 ```text
 NEXT_PUBLIC_BOTMINT_TEST_MINT=1 pnpm --filter @botmint/gallery build
 ```
 
-The flagged page talks to `http://127.0.0.1:8545` (change the field if anvil is on another port). Start anvil yourself. The page can deploy the artifact from the gallery export, mint, sign, load `bots/<id>/loader.json`, transfer to anvil's second account, and recheck. Genesis claims stay closed.
+The flagged mint page talks to `http://127.0.0.1:8545` (change the field if anvil is on another port). Start anvil yourself. The page can deploy the artifact from the gallery export, mint, sign, load `bots/<id>/loader.json`, transfer to anvil's second account, and recheck. The flagged claim page asks an injected wallet (`window.ethereum`) to sign the EIP-712 claim and shows the JSON to copy. If the deployment file still has a null contract, it does not sign. Genesis claims stay closed.
+
+`.github/workflows/gallery-pages.yml` deploys `apps/gallery` to GitHub Pages. It is `workflow_dispatch` only, so it does nothing until a person runs it. The claim signer stays off unless that dispatch sets the test input. `gallery-deploy.yml` is still forced off. This repository does not dispatch the workflow.
 
 ## Base Sepolia
 
-`contracts/script/deploy-base-sepolia.sh` broadcasts only when `BOTMINT_DEPLOY_BASE_SEPOLIA=1` and `DEPLOYER_KEY` and `ADMIN` are set in the environment. Do not commit a key. CI does not run the script. This repository does not deploy, and it does not send transactions to Base.
+`contracts/script/DeployBaseSepolia.s.sol` broadcasts only when `BOTMINT_DEPLOY_BASE_SEPOLIA=1` and `DEPLOYER_KEY` and `ADMIN` are set in the environment. It writes the address into `deployments/base-sepolia.json`. The shell script `contracts/script/deploy-base-sepolia.sh` does not update that file. Do not commit a key. CI does not run either script. This repository does not deploy, and it does not send transactions to Base.
 
-Default RPC in the script: `https://sepolia.base.org`.
+Default RPC: `https://sepolia.base.org`. The steps are in [base-sepolia-deploy.md](base-sepolia-deploy.md).
+
+## CLI package
+
+`packages/cli` is named `botmint` and is set up to publish (`files`, `bin`, `publishConfig.access`, `publishConfig.provenance`). `prepublishOnly` exits unless `BOTMINT_PUBLISH=1`. This repository does not set that and does not publish. The published entry is a bundled `dist/cli.js` plus a copy of `deployments/`. In this checkout the `bin` runs `src/` so tests do not need a bundle. A published install has no `src/` and runs the bundle, which is what `npx botmint` uses.

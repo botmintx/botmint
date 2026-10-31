@@ -153,6 +153,8 @@ const mintDir = path.join(publicDir, "mint");
 mkdirSync(mintDir, { recursive: true });
 cpSync(path.join(root, "packages/mint/claim-domain.json"), path.join(mintDir, "claim-domain.json"));
 cpSync(path.join(root, "packages/mint/abi.json"), path.join(mintDir, "abi.json"));
+cpSync(path.join(root, "deployments/base-sepolia.json"), path.join(mintDir, "base-sepolia.json"));
+cpSync(path.join(root, "deployments/base.json"), path.join(mintDir, "base.json"));
 const compiled = JSON.parse(
   readFileSync(path.join(root, "contracts/out/BotmintGenesis.sol/BotmintGenesis.json"), "utf8"),
 ) as { abi: unknown; bytecode: { object: string } };

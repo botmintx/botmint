@@ -82,6 +82,14 @@ describe("mock checkout", () => {
     const script = readFileSync(path.join(root, "contracts/script/deploy-base-sepolia.sh"), "utf8");
     expect(script).toContain("sepolia.base.org");
     expect(script).not.toMatch(/0x[0-9a-fA-F]{64}/);
+    const foundry = readFileSync(
+      path.join(root, "contracts/script/DeployBaseSepolia.s.sol"),
+      "utf8",
+    );
+    expect(foundry).toContain("BOTMINT_DEPLOY_BASE_SEPOLIA");
+    expect(foundry).toContain("../deployments/base-sepolia.json");
+    expect(foundry).toContain("DEPLOYER_KEY");
+    expect(foundry).not.toMatch(/0x[0-9a-fA-F]{64}/);
   });
 });
 

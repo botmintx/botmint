@@ -4,24 +4,75 @@ import { MemoryNonceStore } from "@botmint/mint";
 import { describe, expect, it } from "vitest";
 import { loadClaimedBot } from "./load.ts";
 import { loaderManifest } from "./manifest.ts";
-import { loaderPack } from "./pack.ts";
-import { LOADER_SKILL_BODY } from "./text.ts";
+import { loaderPack, UnconfiguredDeploymentError } from "./pack.ts";
 
 const root = path.resolve(import.meta.dirname, "../../..");
+const version = (
+  JSON.parse(readFileSync(path.join(root, "packages/cli/package.json"), "utf8")) as {
+    version: string;
+  }
+).version;
+
+const configured = {
+  network: "base-sepolia",
+  chainId: 84532,
+  contract: "0x1111111111111111111111111111111111111111",
+  rpcUrl: "https://sepolia.base.org",
+  galleryBaseUrl: "https://botmintx.github.io/botmint",
+  packageVersion: version,
+};
 
 describe("loader template", () => {
-  it("is one pack that refuses a bad claim and goes dormant if the token moves", () => {
-    const pack = loaderPack();
+  it("bakes the deployment into npx commands and refuses a null address or gallery", () => {
+    const source = readFileSync(new URL("./text.ts", import.meta.url), "utf8");
+    expect(source).not.toContain("https://");
+    expect(source).not.toContain("npx");
+    expect(source).not.toContain("0x");
+    const pack = loaderPack(configured);
     expect(pack.profile.name).toBe("Botmint");
     expect(pack.skills.map((skill) => skill.name)).toEqual(["Load your bot", "Getting started"]);
     expect(pack.routines).toHaveLength(1);
     expect(pack.routines[0]?.name).toBe("Recheck ownership");
-    expect(LOADER_SKILL_BODY).toContain("ownerOf");
-    expect(LOADER_SKILL_BODY.toLowerCase()).toContain("refuse");
+    const verify = `npx --yes botmint@${version} verify-claim --network base-sepolia --code '<claim code json>'`;
+    const fetchLine = `npx --yes botmint@${version} fetch-manifest <tokenId> --network base-sepolia`;
+    const recheck = `npx --yes botmint@${version} check-owner <tokenId> <owner address> --network base-sepolia`;
+    expect(pack.skills[0]?.body).toContain(verify);
+    expect(pack.skills[0]?.body).toContain(fetchLine);
+    expect(pack.skills[0]?.body).toContain(recheck);
+    expect(pack.skills[0]?.body).toContain(configured.contract);
+    expect(pack.skills[0]?.body).toContain(configured.rpcUrl);
+    expect(pack.skills[0]?.body).toContain(configured.galleryBaseUrl);
+    expect(pack.skills[0]?.body).toContain("~/.botmint/nonces.json");
+    expect(pack.skills[1]?.body).toContain(verify);
+    expect(pack.routines[0]?.prompt).toContain(recheck);
     expect(pack.routines[0]?.prompt.toLowerCase()).toContain("dormant");
     expect(pack.memory.join(" ")).toContain("unofficial");
     const text = JSON.stringify(pack);
     expect(text).not.toContain("x.ai/bot");
+
+    const file = JSON.parse(
+      readFileSync(path.join(root, "deployments/base-sepolia.json"), "utf8"),
+    ) as {
+      network: string;
+      contract: string | null;
+      galleryBaseUrl: string;
+      rpcUrl: string;
+      chainId: number;
+    };
+    expect(file.contract).toBeNull();
+    expect(() => loaderPack({ ...file, packageVersion: version })).toThrow(
+      UnconfiguredDeploymentError,
+    );
+    expect(() => loaderPack({ ...file, packageVersion: version })).toThrow(
+      /contract address is null/,
+    );
+    expect(() =>
+      loaderPack({ ...configured, galleryBaseUrl: null }, { allowUnconfigured: false }),
+    ).toThrow(/gallery URL is null/);
+    const open = loaderPack({ ...file, packageVersion: version }, { allowUnconfigured: true });
+    expect(open.skills[0]?.body).toContain("contract: null");
+    expect(open.skills[0]?.body).toContain(file.galleryBaseUrl);
+    expect(open.skills[0]?.body).toContain(file.rpcUrl);
   });
 
   it("writes a per-bot manifest path and refuses the wrong token", async () => {

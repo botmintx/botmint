@@ -9,8 +9,10 @@ export async function run(argv: string[]): Promise<number> {
     return 0;
   } catch (error) {
     if (error instanceof BotmintError) {
-      if (!program.opts().json) console.error(error.message);
-      else console.log(JSON.stringify({ error: error.message }));
+      if (error.message) {
+        if (!program.opts().json) console.error(error.message);
+        else console.log(JSON.stringify({ error: error.message }));
+      }
       return error.code;
     }
     if (error instanceof CommanderError) {

@@ -32,6 +32,7 @@ type DomainFile = {
 };
 
 const seen = new Set<string>();
+const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function TestMint() {
   const [rpc, setRpc] = useState("http://127.0.0.1:8545");
@@ -54,14 +55,14 @@ export function TestMint() {
   }
 
   async function artifact() {
-    const response = await fetch("/mint/BotmintGenesis.json");
+    const response = await fetch(`${base}/mint/BotmintGenesis.json`);
     if (!response.ok)
       throw new Error("missing contract artifact. Run forge build, then rebuild the gallery.");
     return (await response.json()) as { abi: readonly unknown[]; bytecode: Hex };
   }
 
   async function domain(chainId: number, verifyingContract: Address) {
-    const response = await fetch("/mint/claim-domain.json");
+    const response = await fetch(`${base}/mint/claim-domain.json`);
     if (!response.ok) throw new Error("missing claim domain");
     const file = (await response.json()) as DomainFile;
     return {
@@ -207,7 +208,7 @@ export function TestMint() {
         return;
       }
       const stem = String(edition).padStart(4, "0");
-      const response = await fetch(`/bots/${stem}/loader.json`);
+      const response = await fetch(`${base}/bots/${stem}/loader.json`);
       if (!response.ok) {
         setLog(`Refused. No manifest at bots/${stem}/loader.json.`);
         return;

@@ -1,5 +1,6 @@
 name: gallery-deploy
 
+# Disabled. GitHub Pages is gallery-pages.yml, and that workflow is manual only.
 # enable after Genesis launch (roadmap v1.0)
 on:
   workflow_dispatch:
