@@ -60,6 +60,8 @@ import {
   lintPackRoot,
   lintRecipe,
 } from "@botmint/lint";
+import { loaderPack } from "@botmint/loader";
+import { indexTransfers } from "@botmint/mint";
 import {
   assertPolishAllowed,
   DEFAULT_MODEL,
@@ -71,7 +73,7 @@ import {
   readApiKey,
 } from "@botmint/polish";
 import { Command } from "commander";
-import { createPublicClient, type Hex, http } from "viem";
+import { createPublicClient, getAddress, type Hex, http } from "viem";
 
 export class BotmintError extends Error {
   code: number;
@@ -854,6 +856,34 @@ export function createProgram(): Command {
         say(command, state, reminder);
       });
   }
+
+  const loader = program.command("loader").description("Universal Botmint loader template");
+  loader
+    .command("pack")
+    .description("Print the loader recipe JSON to publish from one bot")
+    .option("--out <file>", "also write the recipe to this file")
+    .action((opts, command: Command) => {
+      const pack = loaderPack();
+      const text = JSON.stringify(pack, null, 2);
+      if (opts.out) writeFileSync(path.resolve(opts.out), `${text}\n`);
+      say(command, pack, text);
+    });
+
+  program
+    .command("holders")
+    .description("Read Genesis token holders from Transfer logs. Does not send a transaction.")
+    .requiredOption("--rpc <url>")
+    .requiredOption("--contract <address>")
+    .option("--from-block <n>", "start block", "0")
+    .action(async (opts, command: Command) => {
+      const client = createPublicClient({ transport: http(opts.rpc as string) });
+      const rows = await indexTransfers(
+        client,
+        getAddress(opts.contract as string),
+        BigInt(opts.fromBlock as string),
+      );
+      say(command, rows, JSON.stringify(rows, null, 2));
+    });
 
   return program;
 }

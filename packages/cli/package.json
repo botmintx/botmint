@@ -23,6 +23,8 @@
     "@botmint/core": "workspace:*",
     "@botmint/exporters": "workspace:*",
     "@botmint/lint": "workspace:*",
+    "@botmint/loader": "workspace:*",
+    "@botmint/mint": "workspace:*",
     "@botmint/polish": "workspace:*",
     "@clack/prompts": "0.11.0",
     "commander": "13.1.0",

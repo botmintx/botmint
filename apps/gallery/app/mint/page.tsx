@@ -1,6 +1,10 @@
 import { loadGallery } from "../../lib/load";
+import { TestMint } from "./test-mint";
+
+const testMint = process.env.NEXT_PUBLIC_BOTMINT_TEST_MINT === "1";
 
 export default function MintPage() {
+  if (testMint) return <TestMint />;
   const data = loadGallery();
   return (
     <div>
@@ -25,6 +29,11 @@ export default function MintPage() {
         </p>
         <p className="mt-3 font-mono text-xs text-fog">
           botmint genesis random &lt;nonce from your bot&gt; private
+        </p>
+        <p className="mt-3">
+          A test mint against a mock $10 payment and a local chain is off in this build. Rebuild
+          with NEXT_PUBLIC_BOTMINT_TEST_MINT=1 to wire it. This build does not call X Money and does
+          not deploy.
         </p>
         <p className="mt-3">
           <a href="https://github.com/botmintx/botmint/issues/new?template=genesis-waitlist.yml">
