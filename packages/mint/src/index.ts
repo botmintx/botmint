@@ -1,4 +1,4 @@
-export { genesisSupply } from "./abi.ts";
+export { genesisAbi, genesisSupply } from "./abi.ts";
 export type { ClaimCode, ClaimFailure, NonceStore } from "./claim.ts";
 export {
   CLAIM_DOMAIN_NAME,
@@ -10,7 +10,10 @@ export {
   MemoryNonceStore,
   verifyClaim,
 } from "./claim.ts";
+export type { DeploymentFile } from "./deployment.ts";
+export { manifestUrl, parseDeployment, tokenIdArg } from "./deployment.ts";
 export { claimStatus, type HolderRow, indexTransfers } from "./indexer.ts";
+export { defaultNonceFile, FileNonceStore } from "./nonces.ts";
 export {
   assertPaid,
   MINT_PRICE_USD,
@@ -18,3 +21,5 @@ export {
   type PaymentAdapter,
   type PaymentReceipt,
 } from "./payment.ts";
+export type { OwnerResult, VerifyResult } from "./remote.ts";
+export { checkOwner, fetchManifest, parseClaimCode, verifyClaimRemote } from "./remote.ts";

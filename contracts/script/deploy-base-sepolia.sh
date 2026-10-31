@@ -1,7 +1,9 @@
 #!/bin/sh
 # Deploy BotmintGenesis to Base Sepolia.
-# CI must not run this script. It broadcasts a transaction and needs a key
-# in the environment. Never commit a key, and do not point it at mainnet.
+# Prefer contracts/script/DeployBaseSepolia.s.sol. That Foundry script writes
+# the address back into deployments/base-sepolia.json. This shell script does not.
+# CI must not run either one. Both need a key in the environment. Never commit
+# a key, and do not point them at mainnet.
 set -eu
 if [ "${BOTMINT_DEPLOY_BASE_SEPOLIA:-}" != "1" ]; then
   echo "Refusing to deploy. Read docs/loader-and-test-mint.md. This script is not run by CI."

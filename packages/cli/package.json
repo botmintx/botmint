@@ -1,19 +1,46 @@
 {
   "name": "botmint",
   "version": "0.1.0",
-  "private": true,
+  "description": "Verify a Botmint Genesis claim, fetch the loader manifest, and recheck ownerOf. Unofficial community project, not affiliated with xAI or X.",
+  "license": "MIT",
+  "author": "Brandon M. Crenshaw and botmint contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/botmintx/botmint.git",
+    "directory": "packages/cli"
+  },
   "type": "module",
   "bin": {
     "botmint": "./bin/botmint.js"
   },
+  "files": [
+    "bin",
+    "dist",
+    "deployments",
+    "README.md"
+  ],
   "exports": {
     ".": {
       "types": "./src/main.ts",
       "default": "./src/main.ts"
     }
   },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true,
+    "exports": {
+      ".": "./dist/cli.js"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+  },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "build": "tsc -p tsconfig.json --noEmit",
+    "build": "node scripts/bundle.mjs",
+    "prepack": "node scripts/bundle.mjs",
+    "prepublishOnly": "node scripts/refuse-publish.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
@@ -29,5 +56,8 @@
     "@clack/prompts": "0.11.0",
     "commander": "13.1.0",
     "viem": "2.38.3"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
   }
 }

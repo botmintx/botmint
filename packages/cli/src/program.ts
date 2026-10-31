@@ -60,7 +60,7 @@ import {
   lintPackRoot,
   lintRecipe,
 } from "@botmint/lint";
-import { loaderPack } from "@botmint/loader";
+import { loaderPack, UnconfiguredDeploymentError } from "@botmint/loader";
 import { indexTransfers } from "@botmint/mint";
 import {
   assertPolishAllowed,
@@ -74,6 +74,8 @@ import {
 } from "@botmint/polish";
 import { Command } from "commander";
 import { createPublicClient, getAddress, type Hex, http } from "viem";
+import { cliVersion, DeploymentError, loadDeployment } from "./network.ts";
+import { runCheckOwner, runFetchManifest, runVerifyClaim } from "./remote-commands.ts";
 
 export class BotmintError extends Error {
   code: number;
@@ -112,6 +114,17 @@ function say(command: Command, data: unknown, text: string): void {
   const opts = flags(command);
   if (opts.json) console.log(JSON.stringify(data));
   else if (!opts.quiet) console.log(text);
+}
+
+async function printRemote(pending: Promise<{ exitCode: number; body: unknown }>) {
+  try {
+    const printed = await pending;
+    console.log(JSON.stringify(printed.body));
+    if (printed.exitCode !== 0) throw new BotmintError("", printed.exitCode);
+  } catch (error) {
+    if (error instanceof DeploymentError) throw new BotmintError(error.message, error.code);
+    throw error;
+  }
 }
 
 function editionOf(input: string): number {
@@ -857,16 +870,83 @@ export function createProgram(): Command {
       });
   }
 
+  const networkOption = ["--network <name>", "deployment file name", "base-sepolia"] as const;
+
+  program
+    .command("verify-claim")
+    .description("Check expiry, the EIP-712 signature, and ownerOf. Prints JSON.")
+    .requiredOption("--code <json>", "claim code JSON")
+    .option(...networkOption)
+    .option("--rpc <url>", "override the deployment RPC")
+    .option("--contract <address>", "override the deployment contract")
+    .option("--gallery <url>", "override the gallery base URL")
+    .option("--nonce-file <path>", "replay file. Default: ~/.botmint/nonces.json")
+    .option("--now <unix>", "expiry clock, unix seconds")
+    .action(async (opts, command: Command) => {
+      await printRemote(runVerifyClaim({ ...opts, cwd: flags(command).cwd ?? process.cwd() }));
+    });
+
+  program
+    .command("fetch-manifest")
+    .description("Fetch bots/<id>/loader.json from the gallery. Prints JSON.")
+    .argument("<tokenId>", "Genesis token id")
+    .option(...networkOption)
+    .option("--gallery <url>", "override the gallery base URL")
+    .action(async (tokenId: string, opts, command: Command) => {
+      await printRemote(
+        runFetchManifest({
+          tokenId,
+          network: opts.network,
+          gallery: opts.gallery,
+          cwd: flags(command).cwd ?? process.cwd(),
+        }),
+      );
+    });
+
+  program
+    .command("check-owner")
+    .description("Daily ownerOf recheck. Prints JSON.")
+    .argument("<tokenId>", "Genesis token id")
+    .argument("<address>", "address that should hold the token")
+    .option(...networkOption)
+    .option("--rpc <url>", "override the deployment RPC")
+    .option("--contract <address>", "override the deployment contract")
+    .action(async (tokenId: string, address: string, opts, command: Command) => {
+      await printRemote(
+        runCheckOwner({
+          tokenId,
+          address,
+          network: opts.network,
+          rpc: opts.rpc,
+          contract: opts.contract,
+          cwd: flags(command).cwd ?? process.cwd(),
+        }),
+      );
+    });
+
   const loader = program.command("loader").description("Universal Botmint loader template");
   loader
     .command("pack")
     .description("Print the loader recipe JSON to publish from one bot")
+    .option(...networkOption)
+    .option("--allow-unconfigured", "pack even if the contract or gallery URL is null")
     .option("--out <file>", "also write the recipe to this file")
     .action((opts, command: Command) => {
-      const pack = loaderPack();
-      const text = JSON.stringify(pack, null, 2);
-      if (opts.out) writeFileSync(path.resolve(opts.out), `${text}\n`);
-      say(command, pack, text);
+      try {
+        const deployment = loadDeployment(opts.network ?? "base-sepolia", flags(command).cwd);
+        const pack = loaderPack(
+          { ...deployment, packageVersion: cliVersion() },
+          { allowUnconfigured: Boolean(opts.allowUnconfigured) },
+        );
+        const text = JSON.stringify(pack, null, 2);
+        if (opts.out) writeFileSync(path.resolve(opts.out), `${text}\n`);
+        say(command, pack, text);
+      } catch (error) {
+        if (error instanceof UnconfiguredDeploymentError || error instanceof DeploymentError) {
+          throw new BotmintError(error.message, error instanceof DeploymentError ? error.code : 1);
+        }
+        throw error;
+      }
     });
 
   program
